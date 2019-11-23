@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Image from "../components/image"
 import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 import { gray } from "../styles/colors"
 
 const Title = styled.h2`

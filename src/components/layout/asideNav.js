@@ -26,9 +26,6 @@ const NavItem = styled(Link)`
     color: ${gray.lightTeal};
   }
 `
-const activeStyles = {
-  color: gray.lightTeal,
-}
 const AsideNav = () => {
   return (
     <Aside>
