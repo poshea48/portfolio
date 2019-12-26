@@ -1,9 +1,17 @@
-const gray = {
+const palette = {
   mediumGray: "#7c7c7c",
-  ligthGray: "#eee5e9",
+  lightGray: "#eee5e9",
   darkGray: "#383d3b",
   lightTeal: "#8cbcb9",
   teal: "#52dee5",
 }
 
-export { gray }
+const ocean = {
+  white: "#fff",
+  steelBlue: "#a6bfde",
+  olivine: "#96b362",
+  celestial: "#5096cd",
+  lilBoy: "#65a8d9",
+}
+
+export { palette, ocean }
