@@ -34,7 +34,8 @@ const StyledShakaBackground = styled(BackgroundImage)`
   }
 `
 const style = {
-  height: "800px",
+  maxHeight: "800px",
+  overflowY: "scroll",
   width: "100%",
   backgroundAttachment: "fixed",
   backgroundPosition: "right",
