@@ -5,6 +5,10 @@ import BackgroundImage from "gatsby-background-image"
 import { palette } from "../styles/colors"
 
 const StyledAirportBackground = styled(BackgroundImage)`
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
@@ -34,6 +38,8 @@ const style = {
   width: "100%",
   backgroundColor: palette.lightGray,
   backgroundPosition: "right",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
   backgroundRepeat: "no-repeat",
   flexDirection: "row",
   flexWrap: "wrap",

@@ -5,6 +5,10 @@ import BackgroundImage from "gatsby-background-image"
 import { palette } from "../styles/colors"
 
 const StyledShakaBackground = styled(BackgroundImage)`
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   @media (max-width: 900px) {
     background-position: 75% 0 !important;
   }
@@ -34,10 +38,12 @@ const StyledShakaBackground = styled(BackgroundImage)`
   }
 `
 const style = {
-  overflowY: "scroll",
   width: "100%",
+  backgroundAttachment: "fixed",
+
   backgroundPosition: "right",
   backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
 }
 const ShakaBackground = ({ children }) => (
   <StaticQuery
