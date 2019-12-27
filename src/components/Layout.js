@@ -12,6 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: ${palette.lightGray};
   font-family: Playfair Display, serif;
+  perspective: 1;
 `
 
 const ProjectTitle = styled.div`

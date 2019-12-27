@@ -27,7 +27,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
     background-position: 88% 0;
   } */
 
-  &:before,
+  /* &:before,
   &:after {
     display: flex;
     position: relative;
@@ -51,7 +51,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
     @media (max-width: 630px) {
       background-position: 88% 0 !important;
     }
-  }
+  } */
 `
 const ShakaBackground = ({ children }) => (
   <StaticQuery
