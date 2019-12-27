@@ -34,13 +34,10 @@ const StyledShakaBackground = styled(BackgroundImage)`
   }
 `
 const style = {
-  maxHeight: "800px",
   overflowY: "scroll",
   width: "100%",
-  backgroundAttachment: "fixed",
   backgroundPosition: "right",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
 }
 const ShakaBackground = ({ children }) => (
   <StaticQuery

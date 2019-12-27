@@ -8,6 +8,8 @@ import Modal from "./modal/Modal"
 const Container = styled.div`
   position: relative;
   height: 800px;
+  width: 100vw;
+  overflow-y: scroll;
 `
 const Greeting = styled.div`
   display: flex;
