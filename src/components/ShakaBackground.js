@@ -15,7 +15,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
   background-size: cover;
   border-radius: 0 0 50px 50px;
 
-  /* @media (max-width: 900px) {
+  @media (max-width: 900px) {
     background-position: 75% 0;
   }
 
@@ -25,10 +25,9 @@ const StyledShakaBackground = styled(BackgroundImage)`
 
   @media (max-width: 630px) {
     background-position: 88% 0;
-  } */
+  }
 
-  /* &:before,
-  &:after {
+  &:before {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -51,7 +50,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
     @media (max-width: 630px) {
       background-position: 88% 0 !important;
     }
-  } */
+  }
 `
 const ShakaBackground = ({ children }) => (
   <StaticQuery
