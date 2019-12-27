@@ -41,10 +41,15 @@ const projects = {
   },
 }
 
+const Container = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+`
 const ProjectTitle = styled.div`
   position: sticky;
   display: flex;
-  margin: 0.5em 0.5em;
   flex-direction: column;
   justify-content: center;
   background: ${palette.lightGray};
@@ -96,9 +101,23 @@ const BackUp = styled.div`
     }
   }
 `
+const ProjectsContainer = styled.div`
+  position: relative;
+  align-self: center;
+  width: 100%;
+`
+
+const Projects = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
 const ProjectsHome = () => {
   return (
-    <>
+    <Container>
       <ProjectTitle id="projects">
         <BackUp onClick={() => scrollTo("#home")}>
           <div className="icon">❮</div>
@@ -106,12 +125,15 @@ const ProjectsHome = () => {
         </BackUp>
         <h1>My Projects</h1>
       </ProjectTitle>
-      <AirportBackground>
-        {Object.keys(projects).map((project, i) => (
-          <Project key={i} image={projects[project]} />
-        ))}
-      </AirportBackground>
-    </>
+      <ProjectsContainer>
+        <AirportBackground />
+        <Projects>
+          {Object.keys(projects).map((project, i) => (
+            <Project key={i} image={projects[project]} />
+          ))}
+        </Projects>
+      </ProjectsContainer>
+    </Container>
   )
 }
 

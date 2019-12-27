@@ -26,6 +26,10 @@ const Link = styled.a`
     color: ${palette.teal};
     transition: all 0.3s ease-in-out;
   }
+
+  @media (max-width: 800px) {
+    color: ${palette.lightGray};
+  }
 `
 
 const ImageContainer = styled.div`

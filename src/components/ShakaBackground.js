@@ -9,6 +9,15 @@ const StyledShakaBackground = styled(BackgroundImage)`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  z-index: -1;
+  @media (min-width: 800px) {
+    background-attachment: fixed !important;
+  }
+
   @media (max-width: 900px) {
     background-position: 75% 0 !important;
   }
@@ -24,6 +33,11 @@ const StyledShakaBackground = styled(BackgroundImage)`
   &:before,
   &:after {
     border-radius: 0 0 50px 50px;
+    opacity: 0.8 !important;
+
+    @media (min-width: 800px) {
+      background-attachment: fixed !important;
+    }
     @media (max-width: 900px) {
       background-position: 75% 0 !important;
     }
@@ -36,12 +50,18 @@ const StyledShakaBackground = styled(BackgroundImage)`
       background-position: 88% 0 !important;
     }
   }
+
+  &:after {
+  }
 `
 const style = {
   width: "100%",
+  position: "absolute",
   backgroundPosition: "right",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  opacity: "0.8",
 }
 const ShakaBackground = ({ children }) => (
   <StaticQuery

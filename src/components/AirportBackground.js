@@ -9,6 +9,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: -1;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
@@ -22,24 +23,35 @@ const StyledAirportBackground = styled(BackgroundImage)`
     margin-top: 1em;
   }
 
-  @media (max-width: 800px) {
-    flex-direction: column;
+  @media (min-width: 800px) {
+    background-attachment: fixed !important;
   }
+
   &:before,
   &:after {
     border-radius: 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    @media (min-width: 800px) {
+      background-attachment: fixed !important;
+    }
   }
 `
 
 const style = {
-  display: "flex",
-  position: "relative",
-  height: "100%",
+  position: "absolute",
+  top: "0",
+  left: "0",
   width: "100%",
+  height: "100%",
   backgroundColor: palette.lightGray,
   backgroundPosition: "right",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
+  backgroundAttachment: "fixed",
   flexDirection: "row",
   flexWrap: "wrap",
   justifyContent: "center",

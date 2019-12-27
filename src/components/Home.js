@@ -9,7 +9,12 @@ const Container = styled.div`
   position: relative;
   height: 800px;
   width: 100vw;
-  overflow-y: scroll;
+`
+
+const Content = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 800px;
 `
 const Greeting = styled.div`
   display: flex;
@@ -19,6 +24,7 @@ const Greeting = styled.div`
   justify-content: center;
   text-transform: uppercase;
   font-family: Playfair Display, serif;
+  margin-bottom: 1em;
 `
 
 const Title = styled.div`
@@ -75,11 +81,12 @@ const Name = styled.div`
 `
 const Home = () => {
   return (
-    <StyledShakaBackground>
-      <Container id="home">
+    <Container id="home">
+      <StyledShakaBackground />
+      <Content>
         <Greeting>
+          <Modal />
           <Title>
-            <Modal />
             <h1>Aloha World</h1>
           </Title>
           <Navbar />
@@ -88,8 +95,8 @@ const Home = () => {
           <h1>Paul O'Shea</h1>
           <h3>Full Stack Developer</h3>
         </Name>
-      </Container>
-    </StyledShakaBackground>
+      </Content>
+    </Container>
   )
 }
 
