@@ -14,12 +14,13 @@ const StyledShakaBackground = styled(BackgroundImage)`
   width: 100%;
   height: 800px;
   z-index: -1;
-  @media (min-width: 800px) {
-    background-attachment: fixed !important;
-  }
 
   @media (max-width: 900px) {
     background-position: 75% 0 !important;
+  }
+
+  @media (max-width: 800px) {
+    background-size: 100% 100% !important;
   }
 
   @media (max-width: 725px) {
@@ -35,8 +36,8 @@ const StyledShakaBackground = styled(BackgroundImage)`
     border-radius: 0 0 50px 50px;
     opacity: 0.8 !important;
 
-    @media (min-width: 800px) {
-      background-attachment: fixed !important;
+    @media (max-width: 800px) {
+      background-size: 100% 100% !important;
     }
     @media (max-width: 900px) {
       background-position: 75% 0 !important;
