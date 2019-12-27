@@ -39,8 +39,6 @@ const StyledShakaBackground = styled(BackgroundImage)`
 `
 const style = {
   width: "100%",
-  backgroundAttachment: "fixed",
-
   backgroundPosition: "right",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",

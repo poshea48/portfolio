@@ -39,7 +39,6 @@ const style = {
   backgroundColor: palette.lightGray,
   backgroundPosition: "right",
   backgroundSize: "cover",
-  backgroundAttachment: "fixed",
   backgroundRepeat: "no-repeat",
   flexDirection: "row",
   flexWrap: "wrap",
