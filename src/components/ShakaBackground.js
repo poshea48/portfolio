@@ -21,7 +21,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
   }
 
   @media only screen and (max-width: 768px) {
-    background-size: 100% 100vh;
+    background-size: 100% 800px;
   }
 
   @media (max-width: 725px) {
