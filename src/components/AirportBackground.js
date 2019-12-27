@@ -7,10 +7,12 @@ import { palette } from "../styles/colors"
 const StyledAirportBackground = styled(BackgroundImage)`
   display: flex;
   width: 100%;
+  height: 100%;
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-color: ${palette.lightGray};
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,10 +22,12 @@ const StyledAirportBackground = styled(BackgroundImage)`
   &:after {
     display: flex;
     width: 100%;
+    position: relative;
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-color: ${palette.lightGray};
     flex-direction: row;
     flex-wrap: wrap;
