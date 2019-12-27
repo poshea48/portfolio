@@ -5,36 +5,6 @@ import BackgroundImage from "gatsby-background-image"
 import { palette } from "../styles/colors"
 
 const StyledAirportBackground = styled(BackgroundImage)`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: ${palette.lightGray};
-  flex-direction: row;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  justify-content: center;
-  &:before,
-  &:after {
-    display: flex;
-    width: 100%;
-    position: relative;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: ${palette.lightGray};
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 50px;
-    justify-content: center;
-  }
-
   h1 {
     text-align: center;
     color: ${palette.lightGray};
@@ -51,7 +21,26 @@ const StyledAirportBackground = styled(BackgroundImage)`
   @media (max-width: 800px) {
     flex-direction: column;
   }
+  &:before,
+  &:after {
+    border-radius: 50px;
+  }
 `
+
+const style = {
+  display: "flex",
+  position: "relative",
+  height: "100%",
+  width: "100%",
+  backgroundAttachment: "fixed",
+  backgroundColor: palette.lightGray,
+  backgroundPosition: "right",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "center",
+}
 
 const AirportBackground = ({ children }) => (
   <StaticQuery
@@ -72,6 +61,7 @@ const AirportBackground = ({ children }) => (
         <StyledAirportBackground
           fluid={imageData}
           backgroundColor={palette.lightGray}
+          style={style}
         >
           {children}
         </StyledAirportBackground>
