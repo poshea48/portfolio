@@ -27,7 +27,8 @@ const StyledShakaBackground = styled(BackgroundImage)`
     background-position: 88% 0;
   }
 
-  &:before {
+  &:before,
+  &:after {
     display: flex;
     position: relative;
     flex-direction: column;
