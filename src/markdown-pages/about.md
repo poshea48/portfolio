@@ -29,11 +29,11 @@ When I'm not building a project I will most likely be here...
 - at the beach
 
 I made the transition into Software Development 3 years ago, coming from a 13 year career in the Medical Device Field.
-My reasons for leaving:
+My reasons for leaving have now become the core values I look for in building my new career
 
-1. Challenge
-1. Continuing to Learn
-1. Career Advancement
+1. Strive for challenge and constantly push myself past my limits
+1. Learn something new everday
+1. Never be statisfied with the status quo
 
 So contact me if...
 
