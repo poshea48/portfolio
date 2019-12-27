@@ -9,16 +9,18 @@ const StyledShakaBackground = styled(BackgroundImage)`
   flex-direction: column; */
   height: 800px;
   width: 100%;
-  position: fixed;
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 0 50px 50px;
-  z-index: -5;
   /* transform: scale(1.1, 1.1); */
   @media (max-width: 900px) {
     background-position: 75% 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    background-size: cover !important;
   }
 
   @media (max-width: 725px) {
@@ -32,14 +34,10 @@ const StyledShakaBackground = styled(BackgroundImage)`
   &:before,
   &:after {
     content: "";
-
     display: flex;
-    position: fixed;
     flex-direction: column;
     height: 800px;
     width: 100%;
-    z-index: -5;
-    /* transform: scale(1.1, 1.1); */
     background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
@@ -78,11 +76,6 @@ const ShakaBackground = ({ children }) => (
         <StyledShakaBackground
           fluid={imageData}
           backgroundColor={palette.lightGray}
-          style={{
-            backgroundSize: "",
-            backgroundPosition: "",
-            backgroundRepeat: "",
-          }}
         >
           {children}
         </StyledShakaBackground>

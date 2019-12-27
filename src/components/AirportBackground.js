@@ -68,7 +68,6 @@ const AirportBackground = ({ children }) => (
         <StyledAirportBackground
           fluid={imageData}
           backgroundColor={palette.lightGray}
-          style={{}}
         >
           {children}
         </StyledAirportBackground>

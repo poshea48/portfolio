@@ -45,7 +45,6 @@ const WaterBackground = ({ children }) => (
         <StyledWaterBackground
           fluid={imageData}
           backgroundColor={palette.lightGray}
-          style={{}}
         >
           {children}
         </StyledWaterBackground>
