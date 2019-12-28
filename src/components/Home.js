@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { palette } from "../styles/colors"
+import { palette, ocean } from "../styles/colors"
 import Navbar from "./Navbar"
 import StyledShakaBackground from "./ShakaBackground"
 import Modal from "./modal/Modal"
@@ -31,15 +31,20 @@ const Title = styled.div`
   display: flex;
   margin-bottom: 0.5em;
   justify-content: space-around;
+  background-color: #f28c38;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 10px #f28c38;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
+
     margin-bottom: 0;
   }
 
   @media (max-width: 400px) {
     h1 {
       font-size: 1.8em;
+      line-height: 1.3;
     }
   }
 
@@ -50,24 +55,34 @@ const Title = styled.div`
 
 const Name = styled.div`
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-family: Playfair Display, serif;
   top: 15em;
   position: sticky;
-  font-weight: normal;
   z-index: -1;
   h1 {
     text-align: center;
+    align-self: center;
+    background-color: ${ocean.celestial};
     color: ${palette.lightGray};
+    font-weight: 900;
+    margin: 0;
+    box-shadow: 0 0 15px 15px ${ocean.celestial};
   }
   h3 {
     text-align: center;
+    align-self: center;
     font-size: 1em;
+    background-color: ${ocean.celestial};
     color: ${palette.darkGray};
+    font-weight: 900;
+    box-shadow: 0 5px 5px 5px ${ocean.celestial};
   }
 
   @media (max-width: 700px) {
-    top: 10em;
+    top: 18em;
   }
 
   @media (max-width: 400px) {

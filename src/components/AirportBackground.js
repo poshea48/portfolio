@@ -23,8 +23,9 @@ const StyledAirportBackground = styled(BackgroundImage)`
     margin-top: 1em;
   }
 
-  @media (min-width: 800px) {
-    background-attachment: fixed !important;
+  @media (max-width: 500px) {
+    background-attachment: scroll !important;
+    background-position: bottom !important;
   }
 
   &:before,
@@ -35,8 +36,9 @@ const StyledAirportBackground = styled(BackgroundImage)`
     -o-background-size: cover;
     background-size: cover;
 
-    @media (min-width: 800px) {
-      background-attachment: fixed !important;
+    @media (max-width: 500px) {
+      background-attachment: scroll !important;
+      background-position: bottom !important;
     }
   }
 `

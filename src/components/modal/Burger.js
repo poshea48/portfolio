@@ -4,17 +4,17 @@ import { palette } from "../../styles/colors"
 
 const StyledBurger = styled.button`
   position: absolute;
+  top: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 2rem;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0.25em;
+  /* box-shadow: 0 0 5px 5px ${palette.darkGray}; */
   z-index: 10;
-  padding-top: 0.5em;
   &:focus {
     outline: none;
   }
@@ -32,7 +32,7 @@ const StyledBurger = styled.button`
     }
     &:nth-child(2) {
       opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? "translateX(30px)" : "translateX(0)")};
     }
     &:nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
