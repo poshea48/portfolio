@@ -5,6 +5,7 @@ import Navbar from "./Navbar"
 import StyledShakaBackground from "./ShakaBackground"
 import Modal from "./modal/Modal"
 
+const sunColor = "#f28c38"
 const Container = styled.div`
   position: relative;
   height: 800px;
@@ -13,15 +14,18 @@ const Container = styled.div`
 
 const Content = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 800px;
 `
 const Greeting = styled.div`
   display: flex;
   position: sticky;
-  top: 3em;
+  top: 0;
+  left: 0;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   text-transform: uppercase;
   font-family: Playfair Display, serif;
   margin-bottom: 1em;
@@ -29,11 +33,15 @@ const Greeting = styled.div`
 
 const Title = styled.div`
   display: flex;
+  padding-top: 3em;
+  padding-bottom: 3em;
   margin-bottom: 0.5em;
+  opacity: 0.8;
   justify-content: space-around;
-  background-color: #f28c38;
-  border-radius: 20px;
+  background-color: ${palette.darkGray};
+  border-radius: 0 0 50% 50%;
   box-shadow: 0 0 10px 10px #f28c38;
+  z-index: -1;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
@@ -66,6 +74,7 @@ const Name = styled.div`
     text-align: center;
     align-self: center;
     background-color: ${ocean.celestial};
+    opacity: 0.9;
     color: ${palette.lightGray};
     font-weight: 900;
     margin: 0;
@@ -75,6 +84,7 @@ const Name = styled.div`
     text-align: center;
     align-self: center;
     font-size: 1em;
+    opacity: 0.8;
     background-color: ${ocean.celestial};
     color: ${palette.darkGray};
     font-weight: 900;

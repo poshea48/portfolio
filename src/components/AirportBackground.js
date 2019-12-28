@@ -10,6 +10,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
   -o-background-size: cover;
   background-size: cover;
   z-index: -1;
+  opacity: 0.8 !important;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
@@ -25,7 +26,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
 
   @media (max-width: 500px) {
     background-attachment: scroll !important;
-    background-position: bottom !important;
+    background-position: 80% !important;
   }
 
   &:before,
@@ -35,10 +36,11 @@ const StyledAirportBackground = styled(BackgroundImage)`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity: 0.8 !important;
 
     @media (max-width: 500px) {
       background-attachment: scroll !important;
-      background-position: bottom !important;
+      background-position: 80% !important;
     }
   }
 `

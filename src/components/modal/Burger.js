@@ -4,7 +4,6 @@ import { palette } from "../../styles/colors"
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,7 +20,7 @@ const StyledBurger = styled.button`
   div {
     width: 1.8rem;
     height: 0.25rem;
-    background: ${p => (p.open ? palette.lightGray : palette.darkGray)};
+    background: ${palette.lightGray};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

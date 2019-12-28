@@ -30,7 +30,6 @@ const StyledShakaBackground = styled(BackgroundImage)`
   @media (max-width: 500px) {
     background-attachment: scroll !important;
     background-position: 88% 10% !important;
-    opacity: 0.8 !important;
   }
 
   &:before,
@@ -52,7 +51,6 @@ const StyledShakaBackground = styled(BackgroundImage)`
     @media (max-width: 500px) {
       background-attachment: scroll !important;
       background-position: 88% 10% !important;
-      opacity: 0.8 !important;
     }
   }
 `
