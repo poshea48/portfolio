@@ -115,7 +115,7 @@ const Navbar = () => {
       </NavLinkWrapper>
       <NavLinkWrapper>
         <NavLink to="/contact">
-          <span className="title">Lets Chat</span>
+          <span className="title">Let's Chat</span>
           <ChatBubble />
         </NavLink>
       </NavLinkWrapper>
