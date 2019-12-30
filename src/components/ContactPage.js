@@ -33,6 +33,9 @@ const Container = styled.div`
   display: flex;
   overflow: scroll;
   flex-direction: column;
+  h2 {
+    text-align: center;
+  }
   h3 {
     text-align: center;
     color: ${ocean.olivine};
@@ -49,10 +52,11 @@ const Container = styled.div`
   }
   p {
     color: ${ocean.celestial};
-    &:last-child {
+    /* &:last-child {
       text-align: center;
-    }
+    } */
   }
+
   li {
     color: ${palette.mediumGray};
   }
@@ -64,6 +68,16 @@ const Container = styled.div`
   em a {
     color: ${ocean.olivine};
     font-size: 18px;
+  }
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tech p {
+    flex-basis: 50%;
+    color: ${palette.mediumGray};
+    text-align: center;
   }
 `
 const ContactPage = () => {

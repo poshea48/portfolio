@@ -22,11 +22,25 @@ I live on the beautiful island of Maui Hawaii, with...
 #####Mac Man
 ![mac](../images/mac-new-sharp.jpeg)
 
-When I'm not building a project I will most likely be here...
+I build Full Stack Web Applications using these technologies...
+####Frontend
 
-- on the volleyball court
-- on a hike
-- at the beach
+<div class="tech">
+<p>JavaScript</p>
+<p>React.js</p>
+<p>Gatsby</p>
+<p>Next.js</p>
+<p>Apollo</p>
+<p>Redux</p>
+</div>
+
+####Backend
+
+<div class="tech">
+<p>Node/Express</p>
+<p>GraphQL</p>
+<p>Postgresql
+</div>
 
 I made the transition into Software Development 3 years ago, coming from a 13 year career in the Medical Device Field.
 My reasons for leaving have now become the core values I look for in building my new career
@@ -41,10 +55,8 @@ So contact me if...
 - You want to collabarate on something
 - You want to talk shop
 - You have some thoughts/ideas or comments on how I can improve on any of my projects
-- Want to chat about some beach volleyball
-- You live in Maui and want to play some volleyball
 - Just want to say hi!
 
 Thank you for taking the time to learn about me, you can reach me at...
 
-**_<osheapaulf@gmail.com>_**
+##**_<osheapaulf@gmail.com>_**

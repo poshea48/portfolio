@@ -5,7 +5,6 @@ import Navbar from "./Navbar"
 import StyledShakaBackground from "./ShakaBackground"
 import Modal from "./modal/Modal"
 
-const sunColor = "#f28c38"
 const Container = styled.div`
   position: relative;
   height: 800px;
@@ -13,11 +12,14 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  /* top: 0;
+  left: 0; */
   width: 100%;
   height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 `
 const Greeting = styled.div`
   display: flex;
@@ -33,20 +35,25 @@ const Greeting = styled.div`
 
 const Title = styled.div`
   display: flex;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  position: sticky;
+  padding-top: 2em;
   margin-bottom: 0.5em;
-  opacity: 0.8;
+  opacity: 0.9;
   justify-content: space-around;
-  background-color: ${palette.darkGray};
-  border-radius: 0 0 50% 50%;
-  box-shadow: 0 0 10px 10px #f28c38;
+  background-color: transparent;
+
   z-index: -1;
   h1 {
     text-align: center;
     color: ${palette.lightGray};
 
     margin-bottom: 0;
+  }
+
+  @media (max-width: 500px) {
+    box-shadow: 0px 0 20px 20px ${ocean.celestial};
+    background-color: ${ocean.celestial};
+    opacity: 0.8;
   }
 
   @media (max-width: 400px) {
@@ -68,6 +75,7 @@ const Name = styled.div`
   width: 100%;
   font-family: Playfair Display, serif;
   top: 15em;
+  padding-top: 1em;
   position: sticky;
   z-index: -1;
   h1 {
@@ -83,25 +91,17 @@ const Name = styled.div`
   h3 {
     text-align: center;
     align-self: center;
-    font-size: 1em;
-    opacity: 0.8;
+    font-size: 1.3em;
+    /* opacity: 0.8; */
+    margin-top: 0.5em;
     background-color: ${ocean.celestial};
     color: ${palette.darkGray};
     font-weight: 900;
-    box-shadow: 0 5px 5px 5px ${ocean.celestial};
+    box-shadow: 0 0 10px 10px ${ocean.celestial};
   }
 
-  @media (max-width: 700px) {
-    top: 18em;
-  }
-
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    h3 {
-      font-size: 1em;
-    }
+  @media (max-width: 500px) {
+    top: 4em;
   }
 `
 const Home = () => {

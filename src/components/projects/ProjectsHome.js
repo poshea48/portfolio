@@ -12,7 +12,7 @@ const projects = {
   //   link: "https://marine-debris-cleanup.herokuapp.com/"
   // }
   rbPhotos: {
-    name: "Photography Gallery",
+    name: "Gallery",
     description:
       "E-commerce site for a local photographer to showcase and sell their work.",
     img: "rbPhotos",
@@ -26,14 +26,14 @@ const projects = {
     link: "https://po-hours-tracker.herokuapp.com",
   },
   mockDraft: {
-    name: "NFL/Fantasy Football Mock Draft",
+    name: "Mock Draft",
     description:
       "Create and control a mock draft for any NFL team or your own Fantasy Football team",
     img: "mockDraft",
     link: "https://mock-it-up.netlify.com/",
   },
   tournTracker: {
-    name: "Volleyball Tournament Tracker",
+    name: "Tournament Tracker",
     description:
       "Create and track Volleyball Tournaments.  With in-game functionality",
     img: "tournTracker",
@@ -110,10 +110,7 @@ const ProjectsContainer = styled.div`
 const Projects = styled.div`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 `
 const ProjectsHome = () => {
   return (

@@ -7,7 +7,7 @@ import { useOnClickOutside } from "../hooks"
 const Container = styled.div`
   position: absolute;
   display: none;
-  top: 3.2em;
+  top: 2.2em;
   left: 1em;
   @media (max-width: 550px) {
     display: flex;
@@ -20,7 +20,7 @@ const Container = styled.div`
 
   @media (max-width: 400px) {
     display: flex;
-    left: 0.5em;
+    left: 0.2em;
   }
 `
 const Modal = () => {
