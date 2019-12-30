@@ -37,15 +37,18 @@ I build Full Stack Web Applications using these technologies...
 ####Backend
 
 <div class="tech">
-<p>Node/Express</p>
+<p>Node</p>
+<p>Express</p>
 <p>GraphQL</p>
-<p>Postgresql
+<p>Postgresql</p>
+<p>MySQL</p>
+<p>MongoDB</p>
 </div>
 
 I made the transition into Software Development 3 years ago, coming from a 13 year career in the Medical Device Field.
 My reasons for leaving have now become the core values I look for in building my new career
 
-1. Strive for challenge and constantly push myself past my limits
+1. Strive for challenge and to be pushed past my limits
 1. Learn something new everday
 1. Never be statisfied with the status quo
 

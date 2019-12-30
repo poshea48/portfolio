@@ -70,12 +70,14 @@ const Container = styled.div`
     font-size: 18px;
   }
   .tech {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* @media (max-width: 400px) {
+      grid-template-columns: 100%;
+    } */
   }
 
   .tech p {
-    flex-basis: 50%;
     color: ${palette.mediumGray};
     text-align: center;
   }
