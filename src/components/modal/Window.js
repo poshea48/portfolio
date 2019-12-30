@@ -99,7 +99,7 @@ const Window = ({ open }) => {
   return (
     <StyledWindow open={open}>
       <NavLink to="/contact">
-        <span className="title">Lets Chat</span>
+        <span className="title">Let's Chat</span>
         <ChatBubble />
       </NavLink>
 
