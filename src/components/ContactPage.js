@@ -22,13 +22,14 @@ const LinksContainer = styled.div`
   justify-content: space-around;
   background-color: ${ocean.white};
   opacity: 0.9;
-  height: 45px;
   padding: 0.5em 0;
   border-radius: 20px 20px 0 0;
   align-self: center;
   max-width: 600px;
   width: 100%;
   z-index: 10;
+  flex-basis: 8%;
+  box-sizing: border-box;
   a {
     color: ${palette.darkGray};
     font-weight: 900;
@@ -38,6 +39,7 @@ const LinksContainer = styled.div`
   }
 `
 const Content = styled.div`
+  flex-basis: 1 auto;
   padding: 1em;
   max-width: 600px;
   align-self: center;
