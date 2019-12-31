@@ -7,7 +7,6 @@ import { palette, ocean } from "../styles/colors"
 
 const LinksContainer = styled.div`
   display: flex;
-  padding: 0.8em 0;
   justify-content: space-around;
   background: ${ocean.white};
   opacity: 0.9;
@@ -20,6 +19,7 @@ const LinksContainer = styled.div`
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 0.5em 0;
   }
 `
 const Container = styled.div`

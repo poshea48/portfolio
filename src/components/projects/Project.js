@@ -25,7 +25,7 @@ const Container = styled.div`
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  box-shadow: inset 0 0 22px 10px #708095;
+  box-shadow: inset 0 0 40px 5px #708095;
   margin-bottom: 0;
   h3 {
     text-align: center;

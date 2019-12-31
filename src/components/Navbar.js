@@ -3,7 +3,7 @@ import styled from "styled-components"
 import ChatBubble from "./ChatBubble"
 import NavLinkPointer from "./NavLinkPointer"
 import { Link } from "gatsby"
-import { palette } from "../styles/colors"
+import { palette, blues } from "../styles/colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const NavLink = styled(Link)`
     font-size: 1em;
     align-self: center;
     margin-right: 0.5em;
-    color: ${palette.darkGray};
+    color: ${blues.gunMetal};
   }
   &:hover {
     transform: scale(1.2);
@@ -75,7 +75,7 @@ const Nav = styled.div`
     font-size: 1em;
     align-self: center;
     margin-right: 0.5em;
-    color: ${palette.darkGray};
+    color: ${blues.gunMetal};
   }
   &:hover {
     transform: scale(1.2);

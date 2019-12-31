@@ -12,7 +12,7 @@ const projects = {
   //   link: "https://marine-debris-cleanup.herokuapp.com/"
   // }
   rbPhotos: {
-    name: "Gallery",
+    name: "Photo Gallery",
     description:
       "E-commerce site for a local photographer to showcase and sell their work.",
     img: "rbPhotos",
@@ -111,6 +111,7 @@ const Projects = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 1em;
 `
 const ProjectsHome = () => {
   return (

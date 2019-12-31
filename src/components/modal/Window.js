@@ -18,7 +18,7 @@ const StyledWindow = styled.nav`
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 0.3s ease-in-out;
   top: -0.5em;
-  left: -1em;
+  left: -0.5em;
   text-align: left;
 `
 
@@ -27,12 +27,10 @@ const NavLink = styled(Link)`
   cursor: pointer;
   flex-direction: row;
   text-decoration: none;
-  margin-right: 0.5em;
   justify-content: space-between;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
   .title {
-    /* Title */
     font-size: 1em;
     align-self: center;
     color: ${blues.un};
@@ -64,12 +62,10 @@ const Nav = styled.div`
   cursor: pointer;
   flex-direction: row;
   text-decoration: none;
-  margin-right: 0.5em;
   justify-content: space-between;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
   .title {
-    /* Title */
     font-size: 1em;
     align-self: center;
     color: ${blues.un};
