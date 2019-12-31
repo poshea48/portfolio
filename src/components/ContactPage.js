@@ -5,6 +5,17 @@ import { Link } from "gatsby"
 import WaterBackground from "./WaterBackground"
 import { palette, ocean } from "../styles/colors"
 
+const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 const LinksContainer = styled.div`
   display: flex;
   position: relative;
@@ -24,8 +35,8 @@ const LinksContainer = styled.div`
     padding: 0.5em 0;
   }
 `
-const Container = styled.div`
-  padding: 2em;
+const Content = styled.div`
+  padding: 1em;
   max-width: 600px;
   align-self: center;
   /* height: 100%; */
@@ -97,13 +108,14 @@ const ContactPage = () => {
   `)
   const { html } = data.markdownRemark
   return (
-    <WaterBackground>
+    <Wrapper>
+      <WaterBackground />
       <LinksContainer>
         <Link to="/">Home</Link>
         <Link to="/#projects">My Projects</Link>
       </LinksContainer>
-      <Container dangerouslySetInnerHTML={{ __html: html }} />
-    </WaterBackground>
+      <Content dangerouslySetInnerHTML={{ __html: html }} />
+    </Wrapper>
   )
 }
 

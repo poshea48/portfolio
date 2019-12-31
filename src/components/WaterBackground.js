@@ -5,11 +5,10 @@ import BackgroundImage from "gatsby-background-image"
 import { palette } from "../styles/colors"
 
 const StyledWaterBackground = styled(BackgroundImage)`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2em;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   opacity: 0.8;
@@ -25,6 +24,10 @@ const StyledWaterBackground = styled(BackgroundImage)`
     padding: 1em;
   }
 `
+const style = {
+  position: "absolute",
+  backgroundPosition: "0 50%",
+}
 
 const WaterBackground = ({ children }) => (
   <StaticQuery
@@ -45,6 +48,7 @@ const WaterBackground = ({ children }) => (
         <StyledWaterBackground
           fluid={imageData}
           backgroundColor={palette.lightGray}
+          style={style}
         >
           {children}
         </StyledWaterBackground>

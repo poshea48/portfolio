@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import NavLinkPointer from "../NavLinkPointer"
 import ChatBubble from "../ChatBubble"
-import { palette, blues } from "../../styles/colors"
+import { blues } from "../../styles/colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const StyledWindow = styled.nav`

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { palette, ocean, blues } from "../styles/colors"
+import { palette, blues } from "../styles/colors"
 import Navbar from "./Navbar"
 import StyledShakaBackground from "./ShakaBackground"
 import Modal from "./modal/Modal"
