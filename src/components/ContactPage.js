@@ -7,8 +7,9 @@ import { palette, ocean } from "../styles/colors"
 
 const LinksContainer = styled.div`
   display: flex;
+  position: relative;
   justify-content: space-around;
-  background: ${ocean.white};
+  background-color: ${ocean.white};
   opacity: 0.9;
   border-radius: 20px 20px 0 0;
   align-self: center;
