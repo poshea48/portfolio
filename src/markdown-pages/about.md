@@ -8,7 +8,7 @@ title: "About Me"
 
 My name is Paul O'Shea, and I am a Full Stack Developer.
 
-I live on the beautiful island of Maui Hawaii, with...
+I live on the island of Maui Hawaii, with...
 
 ####This beautiful lady
 #####Abigail

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import NavLinkPointer from "../NavLinkPointer"
 import ChatBubble from "../ChatBubble"
-import { palette } from "../../styles/colors"
+import { palette, blues } from "../../styles/colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const StyledWindow = styled.nav`
@@ -11,7 +11,7 @@ const StyledWindow = styled.nav`
   position: absolute;
   flex-direction: column;
   justify-content: space-around;
-  background: ${palette.darkGray};
+  background: ${blues.gunMetal};
   padding: 2.5rem 1rem 1rem 1rem;
   width: 225px;
   height: 180px;
@@ -35,7 +35,7 @@ const NavLink = styled(Link)`
     /* Title */
     font-size: 1em;
     align-self: center;
-    color: ${palette.lightTeal};
+    color: ${blues.un};
   }
   &:hover {
     transform: scale(1.1);
@@ -72,7 +72,7 @@ const Nav = styled.div`
     /* Title */
     font-size: 1em;
     align-self: center;
-    color: ${palette.lightTeal};
+    color: ${blues.un};
   }
   &:hover {
     transform: scale(1.1);

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { palette } from "../../styles/colors"
+import { blues } from "../../styles/colors"
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -12,7 +12,6 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0.35em;
-  /* box-shadow: 0 0 5px 5px ${palette.darkGray}; */
   z-index: 10;
   &:focus {
     outline: none;
@@ -20,7 +19,7 @@ const StyledBurger = styled.button`
   div {
     width: 1.4rem;
     height: 0.15rem;
-    background: ${p => (p.open ? palette.lightGray : palette.darkGray)};
+    background: ${p => (p.open ? blues.laurelGreen : blues.maastrict)};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -36,7 +35,6 @@ const StyledBurger = styled.button`
     &:nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
-
   }
 `
 const Burger = ({ open, setOpen }) => {

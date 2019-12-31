@@ -14,4 +14,12 @@ const ocean = {
   lilBoy: "#65a8d9",
 }
 
-export { palette, ocean }
+const blues = {
+  gunMetal: "#2c313d",
+  laurelGreen: "#b3b39d",
+  tufts: "#3d72c0",
+  maastrict: "#052039",
+  un: "#508fde",
+}
+
+export { palette, ocean, blues }

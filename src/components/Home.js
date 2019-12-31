@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { palette, ocean } from "../styles/colors"
+import { palette, ocean, blues } from "../styles/colors"
 import Navbar from "./Navbar"
 import StyledShakaBackground from "./ShakaBackground"
 import Modal from "./modal/Modal"
@@ -45,7 +45,7 @@ const Title = styled.div`
   z-index: -1;
   h1 {
     text-align: center;
-    color: ${palette.darkGray};
+    color: ${blues.laurelGreen};
 
     margin-bottom: 0;
   }
@@ -83,27 +83,28 @@ const Name = styled.div`
   h1 {
     text-align: center;
     align-self: center;
-    background-color: ${ocean.celestial};
-    opacity: 0.8;
-    color: ${palette.lightGray};
+    color: ${blues.gunMetal};
     font-weight: 900;
     margin: 0;
-    box-shadow: 0 0 15px 15px ${ocean.celestial};
   }
   h3 {
     text-align: center;
     align-self: center;
     font-size: 1.3em;
-    opacity: 0.9;
+    opacity: 0.99;
     margin-top: 0.5em;
-    background-color: ${ocean.celestial};
-    color: ${palette.darkGray};
+    color: ${blues.laurelGreen};
     font-weight: 900;
-    box-shadow: 0 0 10px 10px ${ocean.celestial};
   }
 
   @media (max-width: 500px) {
     top: 4em;
+    h1 {
+      background-color: ${blues.un};
+      box-shadow: 0 0 36px 36px ${blues.un};
+
+      opacity: 0.8;
+    }
   }
 `
 const Home = () => {
