@@ -22,11 +22,12 @@ const LinksContainer = styled.div`
   justify-content: space-around;
   background-color: ${ocean.white};
   opacity: 0.9;
+  margin-bottom: 2em;
   border-radius: 20px 20px 0 0;
   align-self: center;
   max-width: 600px;
   width: 100%;
-  z-index: 10;
+  /* z-index: 10; */
   a {
     color: ${palette.darkGray};
     font-weight: 900;
@@ -39,12 +40,11 @@ const Content = styled.div`
   padding: 1em;
   max-width: 600px;
   align-self: center;
-  /* height: 100%; */
   border-radius: 0 0 20px 20px;
   background: ${ocean.white};
   opacity: 0.9;
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
   flex-direction: column;
   h2 {
     text-align: center;
