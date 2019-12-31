@@ -14,6 +14,7 @@ const LinksContainer = styled.div`
   align-self: center;
   max-width: 600px;
   width: 100%;
+  z-index: 10;
   a {
     color: ${palette.darkGray};
     font-weight: 900;

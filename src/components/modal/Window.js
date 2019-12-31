@@ -15,10 +15,10 @@ const StyledWindow = styled.nav`
   padding: 2.5rem 1rem 1rem 1rem;
   width: 225px;
   height: 180px;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateX(.5em)" : "translateX(-100%)")};
   transition: transform 0.3s ease-in-out;
   top: -0.5em;
-  left: -0.5em;
+  left: -1em;
   text-align: left;
 `
 
