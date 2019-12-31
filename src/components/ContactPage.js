@@ -22,7 +22,7 @@ const LinksContainer = styled.div`
   justify-content: space-around;
   background-color: ${ocean.white};
   opacity: 0.9;
-  margin-bottom: 2em;
+  height: 45px;
   border-radius: 20px 20px 0 0;
   align-self: center;
   max-width: 600px;
