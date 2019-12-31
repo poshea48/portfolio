@@ -23,17 +23,18 @@ const LinksContainer = styled.div`
   background-color: ${ocean.white};
   opacity: 0.9;
   height: 45px;
+  padding: 0.5em 0;
   border-radius: 20px 20px 0 0;
   align-self: center;
   max-width: 600px;
   width: 100%;
-  /* z-index: 10; */
+  z-index: 10;
   a {
     color: ${palette.darkGray};
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.5em 0;
+    /* padding: 0.5em 0; */
   }
 `
 const Content = styled.div`
