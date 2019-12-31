@@ -45,14 +45,14 @@ const Title = styled.div`
   z-index: -1;
   h1 {
     text-align: center;
-    color: ${palette.lightGray};
+    color: ${palette.darkGray};
 
     margin-bottom: 0;
   }
 
-  @media (max-width: 500px) {
-    box-shadow: 0px 0 20px 20px ${ocean.celestial};
-    background-color: ${ocean.celestial};
+  @media (max-width: 550px) {
+    box-shadow: 0px 0 20px 20px ${palette.lightGray};
+    background-color: ${palette.lightGray};
     opacity: 0.8;
   }
 
