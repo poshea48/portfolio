@@ -28,7 +28,7 @@ const LinksContainer = styled.div`
   max-width: 600px;
   width: 100%;
   z-index: 10;
-  flex-basis: 8%;
+  flex-basis: 20%;
   box-sizing: border-box;
   a {
     color: ${palette.darkGray};
