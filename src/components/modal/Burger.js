@@ -6,20 +6,20 @@ const StyledBurger = styled.button`
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.25em;
+  padding: 0.35em;
   /* box-shadow: 0 0 5px 5px ${palette.darkGray}; */
   z-index: 10;
   &:focus {
     outline: none;
   }
   div {
-    width: 1.9rem;
-    height: 0.25rem;
+    width: 1.4rem;
+    height: 0.15rem;
     background: ${p => (p.open ? palette.lightGray : palette.darkGray)};
     border-radius: 10px;
     transition: all 0.3s linear;

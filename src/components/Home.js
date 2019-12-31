@@ -38,7 +38,7 @@ const Title = styled.div`
   position: sticky;
   padding: 1em 0 0.5em 0;
   margin-bottom: 0.5em;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   justify-content: space-around;
   background-color: transparent;
 
@@ -50,12 +50,13 @@ const Title = styled.div`
     margin-bottom: 0;
   }
 
-  @media (max-width: 550px) {
+  //! for white background on mobile
+  /* @media (max-width: 550px) {
     box-shadow: 0px 0 20px 20px ${palette.lightGray};
     background-color: ${palette.lightGray};
     opacity: 0.8;
     border-radius: 10%;
-  }
+  } */
 
   @media (max-width: 400px) {
     h1 {

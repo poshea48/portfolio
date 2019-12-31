@@ -7,7 +7,7 @@ import { useOnClickOutside } from "../hooks"
 const Container = styled.div`
   position: absolute;
   display: none;
-  top: 1.2em;
+  top: 1.3em;
   left: 1em;
   @media (max-width: 550px) {
     display: flex;
@@ -18,7 +18,7 @@ const Container = styled.div`
     left: 0.8em;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 350px) {
     display: flex;
     left: 0.2em;
   }
