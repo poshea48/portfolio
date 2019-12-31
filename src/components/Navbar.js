@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 550px) {
-    opacity: 0;
+    visibility: hidden;
     pointer-events: none;
   }
 `

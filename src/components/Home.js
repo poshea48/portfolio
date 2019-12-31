@@ -36,9 +36,9 @@ const Greeting = styled.div`
 const Title = styled.div`
   display: flex;
   position: sticky;
-  padding-top: 2em;
+  padding: 1em 0 0.5em 0;
   margin-bottom: 0.5em;
-  opacity: 0.9;
+  opacity: 0.8;
   justify-content: space-around;
   background-color: transparent;
 
@@ -54,6 +54,7 @@ const Title = styled.div`
     box-shadow: 0px 0 20px 20px ${palette.lightGray};
     background-color: ${palette.lightGray};
     opacity: 0.8;
+    border-radius: 10%;
   }
 
   @media (max-width: 400px) {
@@ -82,7 +83,7 @@ const Name = styled.div`
     text-align: center;
     align-self: center;
     background-color: ${ocean.celestial};
-    opacity: 0.9;
+    opacity: 0.8;
     color: ${palette.lightGray};
     font-weight: 900;
     margin: 0;
@@ -92,7 +93,7 @@ const Name = styled.div`
     text-align: center;
     align-self: center;
     font-size: 1.3em;
-    /* opacity: 0.8; */
+    opacity: 0.9;
     margin-top: 0.5em;
     background-color: ${ocean.celestial};
     color: ${palette.darkGray};
