@@ -28,13 +28,13 @@ const StyledShakaBackground = styled(BackgroundImage)`
   } */
 
   @media (max-width: 500px) {
-    background-attachment: scroll !important;
+    /* background-attachment: scroll !important; */
     background-position: 95% 10% !important;
   }
 
   &:before,
   &:after {
-    border-radius: 0 0 50px 50px;
+    /* border-radius: 0 0 50px 50px; */
 
     /* @media (max-width: 900px) {
       background-position: 75% 0 !important;
@@ -49,13 +49,14 @@ const StyledShakaBackground = styled(BackgroundImage)`
     } */
 
     @media (max-width: 500px) {
-      background-attachment: scroll !important;
+      /* background-attachment: scroll !important; */
       background-position: 95% 10% !important;
     }
   }
 `
 const style = {
   width: "100%",
+  height: "100%",
   position: "absolute",
   backgroundPosition: "95% 75%",
   backgroundRepeat: "no-repeat",

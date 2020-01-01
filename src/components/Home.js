@@ -7,8 +7,8 @@ import Modal from "./modal/Modal"
 
 const Container = styled.div`
   position: relative;
-  height: 800px;
   width: 100vw;
+  height: 100vh;
 `
 
 const Content = styled.div`
@@ -78,6 +78,7 @@ const Name = styled.div`
   font-family: Playfair Display, serif;
   top: 15em;
   padding-top: 1em;
+  border-bottom: 1em;
   position: sticky;
   z-index: -1;
   h1 {

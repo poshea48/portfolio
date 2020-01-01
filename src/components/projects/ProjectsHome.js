@@ -46,6 +46,7 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
+  z-index: 20;
 `
 const ProjectTitle = styled.div`
   position: sticky;

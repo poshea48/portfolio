@@ -24,14 +24,14 @@ const StyledAirportBackground = styled(BackgroundImage)`
   }
 
   @media (max-width: 500px) {
-    background-attachment: scroll !important;
+    /* background-attachment: scroll !important; */
 
     /* background-position: 80% !important; */
   }
 
   &:before,
   &:after {
-    border-radius: 50px;
+    /* border-radius: 50px; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,7 +39,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
     opacity: 0.7 !important;
 
     @media (max-width: 500px) {
-      background-attachment: scroll !important;
+      /* background-attachment: scroll !important; */
     }
   }
 `
