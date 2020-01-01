@@ -24,7 +24,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
   }
 
   @media (max-width: 500px) {
-    /* background-attachment: scroll !important; */
+    background-attachment: scroll !important;
 
     /* background-position: 80% !important; */
   }
@@ -39,7 +39,7 @@ const StyledAirportBackground = styled(BackgroundImage)`
     opacity: 0.7 !important;
 
     @media (max-width: 500px) {
-      /* background-attachment: scroll !important; */
+      background-attachment: scroll !important;
     }
   }
 `
