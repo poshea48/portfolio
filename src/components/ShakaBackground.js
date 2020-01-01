@@ -28,7 +28,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
   } */
 
   @media (max-width: 500px) {
-    /* background-attachment: scroll !important; */
+    background-attachment: scroll !important;
     background-position: 95% 10% !important;
   }
 
@@ -49,7 +49,7 @@ const StyledShakaBackground = styled(BackgroundImage)`
     } */
 
     @media (max-width: 500px) {
-      /* background-attachment: scroll !important; */
+      background-attachment: scroll !important;
       background-position: 95% 10% !important;
     }
   }

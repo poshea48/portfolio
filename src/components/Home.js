@@ -9,6 +9,8 @@ const Container = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
+  padding-bottom: 1em;
+  box-sizing: border-box;
 `
 
 const Content = styled.div`
@@ -78,7 +80,7 @@ const Name = styled.div`
   font-family: Playfair Display, serif;
   top: 15em;
   padding-top: 1em;
-  border-bottom: 1em;
+  margin-bottom: 1em;
   position: sticky;
   z-index: -1;
   h1 {
