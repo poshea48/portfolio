@@ -5,10 +5,7 @@ import { palette } from "../styles/colors"
 const Pointer = styled.span`
   font-size: 2em;
   color: ${palette.lightGray};
-
-  @media (max-width: 650px) {
-    align-self: center;
-  }
+  align-self: center;
   @keyframes point {
     0% {
       transform: translateY(0);

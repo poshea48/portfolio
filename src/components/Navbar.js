@@ -9,30 +9,34 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  padding: 0 1em;
-  @media (max-width: 850px) {
+  padding: 0 3em;
+  margin-bottom: 1em;
+  align-items: flex-start;
+  @media (max-width: 1100px) {
     justify-content: space-between;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     /* visibility: hidden; */
     display: none;
     pointer-events: none;
   }
 `
-const NavLinkWrapper = styled.div``
+
 const NavLink = styled(Link)`
   display: flex;
   text-decoration: none;
-  height: 50px;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 0;
   margin-bottom: 1em;
+  height: 76px;
   transition: all 0.3s ease-in-out;
   .title {
     /* Title */
     font-size: 1em;
     align-self: center;
-    margin-right: 0.5em;
+    margin-bottom: 5px;
     color: ${blues.gunMetal};
   }
   &:hover {
@@ -56,9 +60,9 @@ const NavLink = styled(Link)`
     animation-fill-mode: both;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 0;
   }
 `
@@ -67,15 +71,15 @@ const Nav = styled.div`
   display: flex;
   text-decoration: none;
   cursor: pointer;
-  /* height: 50px; */
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
   transition: all 0.3s ease-in-out;
   margin-bottom: 1em;
   .title {
     /* Title */
     font-size: 1em;
     align-self: center;
-    margin-right: 0.5em;
     color: ${blues.gunMetal};
   }
   &:hover {
@@ -99,7 +103,7 @@ const Nav = styled.div`
     animation-fill-mode: both;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 0;
@@ -108,18 +112,14 @@ const Nav = styled.div`
 const Navbar = () => {
   return (
     <Container>
-      <NavLinkWrapper>
-        <Nav onClick={() => scrollTo("#projects")}>
-          <span className="title">My Projects</span>
-          <NavLinkPointer />
-        </Nav>
-      </NavLinkWrapper>
-      <NavLinkWrapper>
-        <NavLink to="/contact">
-          <span className="title">Let's Chat</span>
-          <ChatBubble />
-        </NavLink>
-      </NavLinkWrapper>
+      <Nav onClick={() => scrollTo("#projects")}>
+        <span className="title">My Projects</span>
+        <NavLinkPointer />
+      </Nav>
+      <NavLink to="/contact">
+        <span className="title">Let's Chat</span>
+        <ChatBubble />
+      </NavLink>
     </Container>
   )
 }

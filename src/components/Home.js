@@ -40,7 +40,6 @@ const Title = styled.div`
   position: sticky;
   padding: 1em 0 0.5em 0;
   margin-bottom: 0.5em;
-  /* opacity: 0.8; */
   justify-content: space-around;
   background-color: transparent;
 
@@ -51,14 +50,6 @@ const Title = styled.div`
 
     margin-bottom: 0;
   }
-
-  //! for white background on mobile
-  /* @media (max-width: 550px) {
-    box-shadow: 0px 0 20px 20px ${palette.lightGray};
-    background-color: ${palette.lightGray};
-    opacity: 0.8;
-    border-radius: 10%;
-  } */
 
   @media (max-width: 400px) {
     h1 {
@@ -83,10 +74,12 @@ const Name = styled.div`
   margin-bottom: 1em;
   position: sticky;
   z-index: -1;
+  opacity: 0.8;
+
   h1 {
     text-align: center;
     align-self: center;
-    color: ${blues.gunMetal};
+    color: ${palette.lightGray};
     font-weight: 900;
     margin: 0;
   }
@@ -96,8 +89,7 @@ const Name = styled.div`
     font-size: 1.3em;
     opacity: 0.99;
     margin-top: 0.5em;
-    color: ${blues.laurelGreen};
-    font-weight: 900;
+    color: ${blues.maastrict};
   }
 
   @media (max-width: 500px) {
@@ -105,8 +97,6 @@ const Name = styled.div`
     h1 {
       background-color: ${blues.un};
       box-shadow: 0 0 36px 36px ${blues.un};
-
-      opacity: 0.8;
     }
   }
 `

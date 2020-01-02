@@ -7,9 +7,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   width: 40px;
-  @media (max-width: 650px) {
-    align-self: center;
-  }
+  align-self: center;
 `
 const Bubble = styled.div`
   display: flex;
@@ -66,18 +64,6 @@ const Bubble = styled.div`
     margin-bottom: -20px;
   }
 `
-// const Pointer = styled.div`
-//   content: "";
-//   position: absolute;
-//   right: 0;
-//   bottom: 0;
-//   width: 0;
-//   height: 0;
-//   border-left: 10px solid transparent;
-//   border-right: 10px solid transparent;
-//   border-bottom: 10px solid ${palette.lightGray};
-//   box-shadow: inset 0px -1px 4px 1px ${palette.mediumGray};
-// `
 const ChatBubble = () => {
   return (
     <Container>
