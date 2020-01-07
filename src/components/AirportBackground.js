@@ -37,6 +37,9 @@ const StyledAirportBackground = styled(BackgroundImage)`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: 50% 45% !important;
+    z-index: -1;
+
     opacity: 0.7 !important;
 
     @media (max-width: 500px) {
