@@ -16,10 +16,14 @@ const Container = styled.div`
     justify-content: space-between;
   }
 
-  @media (max-width: 600px) {
-    /* visibility: hidden; */
-    display: none;
+  @media (max-width: 800px) {
+    visibility: hidden;
+    /* display: none; */
     pointer-events: none;
+  }
+
+  @media (max-width: 450px) {
+    display: none;
   }
 `
 

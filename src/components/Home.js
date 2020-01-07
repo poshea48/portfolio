@@ -69,7 +69,7 @@ const Name = styled.div`
   flex-direction: column;
   width: 100%;
   font-family: Playfair Display, serif;
-  top: 15em;
+  top: 24em;
   padding-top: 1em;
   margin-bottom: 1em;
   position: sticky;
@@ -79,17 +79,21 @@ const Name = styled.div`
   h1 {
     text-align: center;
     align-self: center;
-    color: ${palette.lightGray};
+    color: ${blues.gunMetal};
     font-weight: 900;
+    font-size: 3em;
     margin: 0;
   }
   h3 {
     text-align: center;
     align-self: center;
     font-size: 1.3em;
-    opacity: 0.99;
     margin-top: 0.5em;
-    color: ${blues.maastrict};
+    color: ${blues.laurelGreen};
+  }
+
+  @media (max-width: 900px) {
+    top: 15em;
   }
 
   @media (max-width: 500px) {
@@ -97,6 +101,7 @@ const Name = styled.div`
     h1 {
       background-color: ${blues.un};
       box-shadow: 0 0 36px 36px ${blues.un};
+      font-size: 2.2em;
     }
   }
 `
