@@ -18,7 +18,7 @@ const Container = styled.div`
 const Layout = () => {
   return (
     <Container>
-      <Seo />
+      <Seo title="Paul O'Shea Full Stack Developer" />
       <Home />
       <ProjectsHome />
     </Container>

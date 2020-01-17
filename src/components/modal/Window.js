@@ -12,13 +12,13 @@ const StyledWindow = styled.nav`
   flex-direction: column;
   justify-content: space-around;
   background: ${blues.gunMetal};
-  padding: 2.5rem 1rem 1rem 1rem;
-  width: 225px;
-  height: 180px;
-  transform: ${({ open }) => (open ? "translateX(.5em)" : "translateX(-100%)")};
+  padding: 2.5rem 2rem 1rem 2rem;
+  width: 250px;
+  height: 200px;
+  transform: ${({ open }) => (open ? "translateX(0em)" : "translateX(-100%)")};
   transition: transform 0.3s ease-in-out;
   top: -0.5em;
-  left: -1em;
+  left: -2em;
   text-align: left;
 `
 

@@ -59,6 +59,7 @@ const ProjectTitle = styled.div`
   height: 55px;
   width: 100%;
   z-index: 10;
+  opacity: 0.8;
   h1 {
     font-weight: 900;
     font-size: 2em;
@@ -117,6 +118,8 @@ const Projects = styled.div`
 const ProjectsHome = () => {
   return (
     <Container>
+      <AirportBackground />
+
       <ProjectTitle id="projects">
         <BackUp onClick={() => scrollTo("#home")}>
           <div className="icon">❮</div>
@@ -125,7 +128,6 @@ const ProjectsHome = () => {
         <h1>My Projects</h1>
       </ProjectTitle>
       <ProjectsContainer>
-        <AirportBackground />
         <Projects>
           {Object.keys(projects).map((project, i) => (
             <Project key={i} image={projects[project]} />

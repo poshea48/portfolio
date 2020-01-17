@@ -7,18 +7,18 @@ const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 2rem;
+  height: 1.8rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.35em;
+  padding: 0;
   z-index: 10;
   &:focus {
     outline: none;
   }
   div {
-    width: 1.4rem;
-    height: 0.15rem;
+    width: 1.8rem;
+    height: 0.22rem;
     background: ${p => (p.open ? blues.laurelGreen : blues.maastrict)};
     border-radius: 10px;
     transition: all 0.3s linear;

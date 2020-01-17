@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: center;
   background: transparent;
   margin: 0.5em;
-  max-width: 500px;
+  max-width: 700px;
   width: 80%;
   margin-bottom: 1em;
   &:hover {
@@ -27,6 +27,8 @@ const Title = styled.div`
   justify-content: center;
   box-shadow: inset 0 0 40px 5px #708095;
   margin-bottom: 0;
+  border-radius: 30px 30px 0 0;
+
   h3 {
     text-align: center;
     padding: 0.25em;
@@ -61,7 +63,7 @@ const Project = ({ image }) => {
           <h3>{name}</h3>{" "}
         </Title>
         <ImageContainer>
-          <Image image={img} />
+          <Image image={img} style={{ borderRadius: "0 0 30px 30px" }} />
         </ImageContainer>
       </Link>
     </Container>

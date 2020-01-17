@@ -69,9 +69,9 @@ const Name = styled.div`
   flex-direction: column;
   width: 100%;
   font-family: Playfair Display, serif;
-  top: 24em;
+  top: 10em;
   padding-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   position: sticky;
   z-index: -1;
   opacity: 0.8;

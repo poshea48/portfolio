@@ -7,9 +7,10 @@ import { useOnClickOutside } from "../hooks"
 const Container = styled.div`
   position: absolute;
   display: none;
-  top: 1.3em;
-  left: 1em;
-  @media (max-width: 800px) {
+  top: 1.5em;
+  left: 2em;
+
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }

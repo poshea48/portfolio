@@ -14,14 +14,14 @@ const StyledShakaBackground = styled(BackgroundImage)`
   width: 100%;
   height: 800px;
   z-index: -1;
-  @media (max-width: 500px) {
+  @media (max-width: 1024px) {
     background-attachment: scroll !important;
     background-position: 95% 10% !important;
   }
 
   &:before,
   &:after {
-    @media (max-width: 500px) {
+    @media (max-width: 1024px) {
       background-attachment: scroll !important;
       background-position: 95% 10% !important;
     }

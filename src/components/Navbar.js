@@ -10,13 +10,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 0 3em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   align-items: flex-start;
   @media (max-width: 1100px) {
     justify-content: space-between;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     visibility: hidden;
     /* display: none; */
     pointer-events: none;
@@ -33,7 +33,7 @@ const NavLink = styled(Link)`
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 0;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   height: 76px;
   transition: all 0.3s ease-in-out;
   .title {
@@ -79,7 +79,7 @@ const Nav = styled.div`
   justify-content: center;
   margin-bottom: 0;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   .title {
     /* Title */
     font-size: 1em;

@@ -48,7 +48,7 @@ const Container = styled.div`
     transform: scale(0);
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
@@ -193,14 +193,6 @@ const Hamburger = props => {
   const [open, setOpen] = useState(false)
   const node = useRef()
 
-  // useEffect(() => {
-  //   if (overlayOn) {
-  //     changeStatus("open")
-  //   } else if (!overlayOn) {
-  //     changeStatus("closed")
-  //   }
-  // }, [overlayOn])
-  //! need to change to individual component so both windows dont open
   const toggleBurger = () => {
     if (open) {
     }
