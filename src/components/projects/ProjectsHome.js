@@ -58,8 +58,8 @@ const ProjectTitle = styled.div`
   top: 0;
   height: 55px;
   width: 100%;
-  z-index: 10;
-  opacity: 0.8;
+  z-index: 20;
+  opacity: 0.9;
   h1 {
     font-weight: 900;
     font-size: 2em;
