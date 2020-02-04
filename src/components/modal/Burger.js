@@ -9,6 +9,7 @@ const StyledBurger = styled.button`
   justify-content: space-around;
   height: 1.8rem;
   background: transparent;
+
   border: none;
   cursor: pointer;
   padding: 0;
@@ -34,6 +35,13 @@ const StyledBurger = styled.button`
     }
     &:nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+
+  @media (max-width: 550px) {
+    height: 1.5em;
+    div {
+      width: 1.5em;
     }
   }
 `

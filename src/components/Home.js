@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { palette, blues } from "../styles/colors"
-import Navbar from "./Navbar"
+import { blues } from "../styles/colors"
 import StyledShakaBackground from "./ShakaBackground"
-import Modal from "./modal/Modal"
-
+import Navigation from "./nav/Navigation"
 const Container = styled.div`
   position: relative;
   width: 100vw;
@@ -18,12 +16,12 @@ const Content = styled.div`
   /* top: 0;
   left: 0; */
   width: 100%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 `
-const Greeting = styled.div`
+const Header = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -32,34 +30,16 @@ const Greeting = styled.div`
   justify-content: flex-start;
   text-transform: uppercase;
   font-family: Playfair Display, serif;
-  margin-bottom: 1em;
-`
+  background-color: ${blues.unRgba};
+  box-shadow: 0 0 36px 36px ${blues.unRgba};
+  padding: 3em 0 0 0;
 
-const Title = styled.div`
-  display: flex;
-  position: sticky;
-  padding: 1em 0 0.5em 0;
-  margin-bottom: 0.5em;
-  justify-content: space-around;
-  background-color: transparent;
-
-  z-index: -1;
-  h1 {
-    text-align: center;
-    color: ${blues.laurelGreen};
-
-    margin-bottom: 0;
+  @media (max-width: 550px) {
+    padding: 2em 3em 0 1em;
   }
 
   @media (max-width: 400px) {
-    h1 {
-      font-size: 1.8em;
-      line-height: 1.3;
-    }
-  }
-
-  @media (max-width: 350px) {
-    padding-left: 1em;
+    padding: 2em 2em 0 0.5em;
   }
 `
 
@@ -69,15 +49,9 @@ const Name = styled.div`
   flex-direction: column;
   width: 100%;
   font-family: Playfair Display, serif;
-  top: 10em;
-  padding-top: 1em;
-  margin-bottom: 2em;
-  position: sticky;
   z-index: -1;
-  opacity: 0.8;
 
   h1 {
-    text-align: center;
     align-self: center;
     color: ${blues.gunMetal};
     font-weight: 900;
@@ -85,23 +59,32 @@ const Name = styled.div`
     margin: 0;
   }
   h3 {
-    text-align: center;
     align-self: center;
     font-size: 1.3em;
-    margin-top: 0.5em;
+    margin: 0.5em 0 0.5em 0;
     color: ${blues.laurelGreen};
   }
 
-  @media (max-width: 900px) {
-    top: 15em;
+  @media (max-width: 550px) {
+    h1 {
+      /* font-size: 2.2em; */
+      align-self: flex-end;
+    }
+    h3 {
+      align-self: flex-end;
+      font-size: 1em;
+    }
   }
 
   @media (max-width: 500px) {
-    top: 4em;
     h1 {
-      background-color: ${blues.un};
-      box-shadow: 0 0 36px 36px ${blues.un};
       font-size: 2.2em;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 2em;
     }
   }
 `
@@ -110,17 +93,13 @@ const Home = () => {
     <Container id="home">
       <StyledShakaBackground />
       <Content>
-        <Greeting>
-          <Modal />
-          <Title>
-            <h1>Aloha World</h1>
-          </Title>
-          <Navbar />
-        </Greeting>
-        <Name>
-          <h1>Paul O'Shea</h1>
-          <h3>Full Stack Developer</h3>
-        </Name>
+        <Header>
+          <Navigation />
+          <Name>
+            <h1>Paul O'Shea</h1>
+            <h3>Full Stack Developer</h3>
+          </Name>
+        </Header>
       </Content>
     </Container>
   )

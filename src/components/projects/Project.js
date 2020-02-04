@@ -13,9 +13,10 @@ const Container = styled.div`
   max-width: 700px;
   width: 80%;
   margin-bottom: 1em;
+  transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+
     h3 {
       text-decoration: underline;
     }

@@ -3,25 +3,26 @@ import Window from "./Window"
 import Burger from "./Burger"
 import styled from "styled-components"
 import { useOnClickOutside } from "../hooks"
+import { blues } from "../../styles/colors"
 
 const Container = styled.div`
-  position: absolute;
+  /* position: absolute; */
   display: none;
-  top: 1.5em;
-  left: 2em;
+  width: 1.8em;
+  height: 1.8em;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 850px) {
     display: flex;
     flex-direction: column;
   }
 
-  @media (max-width: 450px) {
-    left: 0.8em;
+  @media (max-width: 550px) {
+    width: 1.5em;
+    height: 1.5em;
   }
 
   @media (max-width: 350px) {
     display: flex;
-    left: 0.2em;
   }
 `
 const Modal = () => {

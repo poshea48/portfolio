@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { palette } from "../styles/colors"
+import { palette, blues } from "../styles/colors"
 import NavLinkPointer from "./NavLinkPointer"
 import ChatBubble from "./ChatBubble"
 import OverlayContext from "./OverlayContext"
@@ -20,7 +20,7 @@ const Container = styled.div`
   .burger:after,
   .burger:before,
   .burger div {
-    background-color: ${palette.darkGray};
+    background-color: ${blues.gunMetal};
     border-radius: 3px;
     content: "";
     display: block;

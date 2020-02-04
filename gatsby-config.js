@@ -14,14 +14,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, "src", "images"),
+        path: path.join(__dirname, "src", "content", "images"),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: path.join(__dirname, "src", "markdown-pages"),
+        name: `markdown`,
+        path: path.join(__dirname, "src", "content", "markdown"),
       },
     },
     `gatsby-transformer-sharp`,
@@ -56,7 +56,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/thatsme.jpeg`, // This path is relative to the root of the site.
+        icon: `src/content/images/thatsme.jpeg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

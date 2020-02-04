@@ -20,6 +20,7 @@ const blues = {
   tufts: "#3d72c0",
   maastrict: "#052039",
   un: "#508fde",
+  unRgba: "rgba(80, 143, 222, .7)",
 }
 
 export { palette, ocean, blues }

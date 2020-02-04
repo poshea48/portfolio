@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { palette } from "../styles/colors"
+import { palette } from "../../styles/colors"
 
 const Pointer = styled.span`
   font-size: 2em;

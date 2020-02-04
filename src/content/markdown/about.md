@@ -1,8 +1,10 @@
 ---
 title: "About Me"
+date: "2019-12-04"
+description: "This is about me"
 ---
 
-### Aloha, thanks for stopping by!
+### Aloha World!
 
 #### ![its Paul](../images/thatsme.jpeg)
 
