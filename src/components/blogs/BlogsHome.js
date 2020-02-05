@@ -8,8 +8,8 @@ const Container = styled.div`
   background: #f0f8ff;
   display: flex;
   flex-direction: column;
-  /* width: 100vw;
-  height: 100vh; */
+  width: 100vw;
+  height: 100vh;
   padding: 2em;
   /* overflow: scroll; */
   h1 {
