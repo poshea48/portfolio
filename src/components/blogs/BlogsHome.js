@@ -11,6 +11,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 2em;
+  overflow: scroll;
   h1 {
     align-self: center;
     margin: 0;
@@ -54,13 +55,11 @@ const ListItem = styled.div`
     font-size: 14px;
     text-align: center;
     align-self: flex-start;
-    width: 30%;
     color: ${ocean.olivine};
   }
   .title {
     font-size: 30px;
     text-align: left;
-    width: 70%;
     align-self: flex-start;
   }
 
