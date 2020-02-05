@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import { ocean, palette } from "../styles/colors"
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,16 +11,30 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 1em 2em;
+  overflow: scroll;
 
   a {
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 800;
+    color: ${ocean.celestial};
   }
   header {
     display: flex;
     flex-direction: column;
+  }
+
+  h1 {
+    color: ${palette.darkGray};
+  }
+
+  p {
+    color: ${palette.darkGray};
+  }
+
+  .date {
+    color: ${palette.lightTeal};
   }
   li {
     list-style: none;
@@ -39,11 +54,19 @@ const Container = styled.div`
     align-self: center;
   }
 `
-const BlogTemplate = ({ data }) => {
+
+const EndOfStory = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  border-bottom: 1px solid ${palette.darkGray};
+`
+const BlogTemplate = ({ data, pageContext }) => {
   const { html, frontmatter } = data.markdownRemark
+  const { prev, next } = pageContext
+
   return (
     <Container>
-      <SEO title="blog" description="this is blog" />
+      <SEO title={frontmatter.title} description={frontmatter.description} />
       <article>
         <header>
           <nav className="nav-header">
@@ -57,14 +80,24 @@ const BlogTemplate = ({ data }) => {
             </ul>
           </nav>
           <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.date}</p>
+          <p className="date">{frontmatter.date}</p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: html }}></section>
       </article>
+      <EndOfStory />
+      <br />
       <nav className="nav-footer">
         <ul>
-          <li>Previous</li>
-          <li>Next</li>
+          {prev && (
+            <li>
+              <Link to={prev.fields.slug}>Previous</Link>
+            </li>
+          )}
+          {next && (
+            <li>
+              <Link to={next.fields.slug}>Next</Link>
+            </li>
+          )}
         </ul>
       </nav>
     </Container>

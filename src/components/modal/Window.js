@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import NavLinkPointer from "../nav/NavLinkPointer"
-import ChatBubble from "../nav/ChatBubble"
 import { blues } from "../../styles/colors"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -28,8 +26,8 @@ const Nav = styled.nav`
   flex-direction: column;
   justify-content: space-around;
 
-  span,
-  a {
+  a,
+  span {
     font-size: 14px;
     margin: 0 0.5em;
     text-decoration: none;
@@ -44,10 +42,18 @@ const Nav = styled.nav`
   }
 `
 const Window = ({ open }) => {
+  const handleScroll = () => scrollTo("#projects")
   return (
     <StyledWindow open={open}>
       <Nav>
-        <span onClick={() => scrollTo("#projects")}>Projects</span>
+        <span
+          tabIndex="0"
+          role="button"
+          onClick={handleScroll}
+          onKeyDown={handleScroll}
+        >
+          Projects
+        </span>
         <Link to="/contact">Contact</Link>
         <Link to="/blog">Blog</Link>
       </Nav>

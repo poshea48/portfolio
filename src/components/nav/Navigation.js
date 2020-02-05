@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { blues } from "../../styles/colors"
 import Modal from "../modal/Modal"
-import Navbar from "./Navbar"
 
 const Container = styled.div`
   position: absolute;
@@ -48,11 +47,19 @@ const Nav = styled.nav`
 `
 
 const Navigation = () => {
+  const handleScrollTo = () => scrollTo("#projects")
   return (
     <Container>
       <Modal />
       <Nav>
-        <span onClick={() => scrollTo("#projects")}>Projects</span>
+        <span
+          tabIndex="0"
+          role="button"
+          onClick={handleScrollTo}
+          onKeyDown={handleScrollTo}
+        >
+          Projects
+        </span>
         <Link to="/contact">Contact</Link>
         <Link to="/blog">Blog</Link>
       </Nav>

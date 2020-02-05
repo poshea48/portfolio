@@ -3,7 +3,6 @@ import Window from "./Window"
 import Burger from "./Burger"
 import styled from "styled-components"
 import { useOnClickOutside } from "../hooks"
-import { blues } from "../../styles/colors"
 
 const Container = styled.div`
   /* position: absolute; */
