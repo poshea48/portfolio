@@ -28,7 +28,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   a,
   span {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 0.5em;
     text-decoration: none;
     color: ${blues.gunMetal};

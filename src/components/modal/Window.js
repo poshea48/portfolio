@@ -28,8 +28,7 @@ const Nav = styled.nav`
 
   a,
   span {
-    font-size: 14px;
-    margin: 0 0.5em;
+    font-size: 16px;
     text-decoration: none;
     color: ${blues.un};
     font-weight: 900;
