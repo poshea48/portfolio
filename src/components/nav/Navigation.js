@@ -29,7 +29,6 @@ const Nav = styled.nav`
   a,
   span {
     font-size: 16px;
-    margin: 0 0.5em;
     text-decoration: none;
     color: ${blues.gunMetal};
     font-weight: 900;
@@ -40,9 +39,16 @@ const Nav = styled.nav`
       transform: scale(1.2);
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       display: none;
     }
+  }
+
+  span {
+    margin: 0 0.5em 0 0;
+  }
+  a {
+    margin: 0 0.5em;
   }
 `
 
