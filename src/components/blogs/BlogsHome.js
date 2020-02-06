@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { palette, ocean } from "../../styles/colors"
+import { palette } from "../../styles/colors"
 
 const Container = styled.div`
   position: relative;
@@ -55,7 +55,7 @@ const ListItem = styled.div`
     font-size: 14px;
     text-align: center;
     align-self: flex-start;
-    color: ${ocean.olivine};
+    color: #0c28df;
   }
   .title {
     font-size: 30px;
@@ -67,7 +67,7 @@ const ListItem = styled.div`
     margin-top: 1em;
     width: 100%;
     align-self: flex-start;
-    color: ${palette.mediumGray};
+    color: #23557b;
   }
 `
 const BlogsHome = ({ blogs }) => {

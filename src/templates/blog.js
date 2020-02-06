@@ -2,7 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import { ocean, palette } from "../styles/colors"
+import { palette } from "../styles/colors"
+
+const linkRed = "#880618"
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +20,7 @@ const Container = styled.div`
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 800;
-    color: ${ocean.celestial};
+    color: ${linkRed};
 
     &:hover {
       text-decoration: underline;
@@ -38,7 +40,7 @@ const Container = styled.div`
   }
 
   .date {
-    color: ${palette.lightTeal};
+    color: #0c28df; /* accessible blue */
   }
   li {
     list-style: none;
@@ -51,9 +53,6 @@ const Container = styled.div`
 
   .nav-header {
     align-self: flex-end;
-    a {
-      color: ${ocean.celestial};
-    }
   }
   .nav-footer {
     align-self: center;
