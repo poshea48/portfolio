@@ -19,6 +19,10 @@ const Container = styled.div`
     text-transform: uppercase;
     font-weight: 800;
     color: ${ocean.celestial};
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
   header {
     display: flex;
@@ -44,6 +48,7 @@ const Container = styled.div`
     display: flex;
     margin: 0;
   }
+
   .nav-header {
     align-self: flex-end;
     a {
