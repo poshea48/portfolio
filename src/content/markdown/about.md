@@ -10,21 +10,7 @@ description: "This is about me"
 
 My name is Paul O'Shea, and I am a Full Stack Developer.
 
-I live on the island of Maui Hawaii, with...
-
-####This beautiful lady
-#####Abigail
-![gail](../images/boatGail.jpeg)
-
-####this adventurous cat
-#####Nani
-![nani](../images/nani.jpeg)
-
-####and this crazy animal
-#####Mac Man
-![mac](../images/mac-new-sharp.jpeg)
-
-I build Full Stack Web Applications using these technologies...
+I build Web Applications using these technologies...
 ####Frontend
 
 <div class="tech">
@@ -53,6 +39,20 @@ My reasons for leaving have now become the core values I look for in building my
 1. Strive for challenge and to be pushed past my limits
 1. Learn something new everday
 1. Never be statisfied with the status quo
+
+I live on the island of Maui Hawaii, with...
+
+####This beautiful lady
+#####Abigail
+![gail](../images/boatGail.jpeg)
+
+####this adventurous cat
+#####Nani
+![nani](../images/nani.jpeg)
+
+####and this crazy animal
+#####Mac Man
+![mac](../images/mac-new-sharp.jpeg)
 
 So contact me if...
 

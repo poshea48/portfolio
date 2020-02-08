@@ -8,7 +8,7 @@ import { palette, ocean } from "../styles/colors"
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding: 2em;
   flex-direction: column;
@@ -20,14 +20,16 @@ const LinksContainer = styled.div`
   display: flex;
   position: relative;
   justify-content: space-around;
+  align-items: center;
   background-color: ${ocean.white};
-  opacity: 0.9;
+  box-shadow: 0 0 4px 4px;
+  opacity: 0.8;
   padding: 0.5em 0;
   border-radius: 20px 20px 0 0;
   align-self: center;
   max-width: 600px;
   width: 100%;
-  z-index: 10;
+  z-index: 30;
   flex-basis: 20%;
   box-sizing: border-box;
   a {
@@ -45,10 +47,13 @@ const Content = styled.div`
   align-self: center;
   border-radius: 0 0 20px 20px;
   background: ${ocean.white};
-  opacity: 0.9;
+  box-shadow: 0 0 3px 3px;
+
+  opacity: 1;
   display: flex;
   overflow-x: scroll;
   flex-direction: column;
+  z-index: 20;
   h2 {
     text-align: center;
   }
@@ -68,6 +73,7 @@ const Content = styled.div`
   }
   p {
     color: ${ocean.celestial};
+    text-align: center;
     /* &:last-child {
       text-align: center;
     } */
@@ -115,7 +121,8 @@ const ContactPage = () => {
       <WaterBackground />
       <LinksContainer>
         <Link to="/">Home</Link>
-        <Link to="/#projects">My Projects</Link>
+        <Link to="/#projects">Projects</Link>
+        <Link to="/blog">Blog</Link>
       </LinksContainer>
       <Content dangerouslySetInnerHTML={{ __html: html }} />
     </Wrapper>
