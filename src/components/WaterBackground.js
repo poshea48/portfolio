@@ -20,9 +20,9 @@ const StyledWaterBackground = styled(BackgroundImage)`
     opacity: 1;
   }
 
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     padding: 1em;
-  }
+  } */
 `
 const style = {
   position: "absolute",

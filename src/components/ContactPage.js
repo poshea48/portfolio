@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
-  padding: 2em;
+  padding: 2em 1.5em 2.5em 1.5em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,6 @@ const LinksContainer = styled.div`
   max-width: 600px;
   width: 100%;
   z-index: 30;
-  flex-basis: 20%;
   box-sizing: border-box;
   a {
     color: ${palette.darkGray};
@@ -44,6 +43,7 @@ const Content = styled.div`
   flex-basis: 1 auto;
   padding: 1em;
   max-width: 600px;
+  margin-bottom: 2em;
   align-self: center;
   border-radius: 0 0 20px 20px;
   background: ${ocean.white};
