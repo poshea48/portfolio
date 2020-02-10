@@ -8,7 +8,7 @@ import { palette, ocean } from "../styles/colors"
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 2em 1.5em 2.5em 1.5em;
   flex-direction: column;
@@ -41,6 +41,7 @@ const LinksContainer = styled.div`
 `
 const Content = styled.div`
   flex-basis: 1 auto;
+  overflow: scroll;
   padding: 1em;
   max-width: 600px;
   margin-bottom: 2em;

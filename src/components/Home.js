@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { blues } from "../styles/colors"
 import StyledShakaBackground from "./ShakaBackground"
 import Navigation from "./nav/Navigation"
-const Container = styled.div`
+
+const Container = styled.section`
   position: relative;
   width: 100vw;
   height: 100vh;

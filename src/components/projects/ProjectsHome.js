@@ -41,14 +41,14 @@ const projects = {
   },
 }
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   z-index: 20;
 `
-const ProjectTitle = styled.div`
+const ProjectTitle = styled.header`
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -67,10 +67,6 @@ const ProjectTitle = styled.div`
     margin: 0;
     color: ${palette.darkGray};
   }
-  .dev {
-    text-align: center;
-    font-size: 14px;
-  }
 
   @media (max-width: 500px) {
     h1 {
@@ -78,8 +74,8 @@ const ProjectTitle = styled.div`
     }
   }
 `
-
-const BackUp = styled.div`
+//! Need a better element for accessiblity
+const ScrollUp = styled.div`
   position: absolute;
   width: 120px;
   cursor: pointer;
@@ -119,12 +115,11 @@ const ProjectsHome = () => {
   return (
     <Container>
       <AirportBackground />
-
       <ProjectTitle id="projects">
-        <BackUp onClick={() => scrollTo("#home")}>
+        <ScrollUp onClick={() => scrollTo("#home")}>
           <div className="icon">❮</div>
           <span>Home</span>
-        </BackUp>
+        </ScrollUp>
         <h1>My Projects</h1>
       </ProjectTitle>
       <ProjectsContainer>

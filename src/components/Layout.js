@@ -5,7 +5,7 @@ import Home from "./Home"
 import ProjectsHome from "./projects/ProjectsHome"
 import { palette } from "../styles/colors"
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: column;
   position: relative;

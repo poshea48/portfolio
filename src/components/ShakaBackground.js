@@ -15,19 +15,12 @@ const StyledShakaBackground = styled(BackgroundImage)`
   height: 800px;
   z-index: -1;
   background-attachment: scroll !important;
-  background-position: center center;
-
-  @media (max-width: 800px) {
-    background-position: 100% 10% !important;
-  }
+  background-position: 100% center;
 
   &:before,
   &:after {
     background-attachment: scroll !important;
-    background-position: center center;
-    @media (max-width: 800px) {
-      background-position: 100% 10% !important;
-    }
+    background-position: 100% center;
   }
 `
 const style = {
