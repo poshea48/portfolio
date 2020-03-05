@@ -11,12 +11,12 @@ const projects = {
   //   img: "beachCleanup",
   //   link: "https://marine-debris-cleanup.herokuapp.com/"
   // }
-  rbPhotos: {
-    name: "Photo Gallery",
+  mockDraft: {
+    name: "Mock Draft",
     description:
-      "E-commerce site for a local photographer to showcase and sell their work.",
-    img: "rbPhotos",
-    link: "https://ryanbrewerphotography.now.sh",
+      "Create and control a mock draft for any NFL team or your own Fantasy Football team",
+    img: "mockDraft",
+    link: "https://mock-it-up.netlify.com/",
   },
   hoursTracker: {
     name: "Hours Tracker",
@@ -25,12 +25,12 @@ const projects = {
     img: "hoursTracker",
     link: "https://po-hours-tracker.herokuapp.com",
   },
-  mockDraft: {
-    name: "Mock Draft",
+  rbPhotos: {
+    name: "Photo Gallery",
     description:
-      "Create and control a mock draft for any NFL team or your own Fantasy Football team",
-    img: "mockDraft",
-    link: "https://mock-it-up.netlify.com/",
+      "E-commerce site for a local photographer to showcase and sell their work.",
+    img: "rbPhotos",
+    link: "https://ryanbrewerphotography.now.sh",
   },
   tournTracker: {
     name: "Tournament Tracker",

@@ -40,7 +40,7 @@ const List = styled.ul`
   }
 `
 
-const ListItem = styled.div`
+const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
