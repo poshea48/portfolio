@@ -33,7 +33,7 @@ const Image = ({ image, style = {} }) => {
           }
         }
       }
-      tournTracker: file(relativePath: { eq: "tournTracker.png" }) {
+      tournTracker: file(relativePath: { eq: "tournTracker2.png" }) {
         childImageSharp {
           fluid(maxWidth: 700, maxHeight: 400) {
             ...GatsbyImageSharpFluid
