@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
-import { palette } from "../styles/colors"
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
+import { palette } from '../styles/colors';
 
 const StyledAirportBackground = styled(BackgroundImage)`
   -webkit-background-size: cover;
@@ -46,23 +46,23 @@ const StyledAirportBackground = styled(BackgroundImage)`
       background-attachment: scroll !important;
     }
   }
-`
+`;
 
 const style = {
-  position: "absolute",
-  top: "0",
-  left: "0",
-  width: "100%",
-  height: "100%",
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100%',
   backgroundColor: palette.lightGray,
   // backgroundPosition: "center top",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "center",
-}
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+};
 
 const AirportBackground = ({ children }) => (
   <StaticQuery
@@ -77,8 +77,8 @@ const AirportBackground = ({ children }) => (
         }
       }
     `}
-    render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
+    render={(data) => {
+      const imageData = data.desktop.childImageSharp.fluid;
       return (
         <StyledAirportBackground
           fluid={imageData}
@@ -87,9 +87,9 @@ const AirportBackground = ({ children }) => (
         >
           {children}
         </StyledAirportBackground>
-      )
+      );
     }}
   />
-)
+);
 
-export default AirportBackground
+export default AirportBackground;

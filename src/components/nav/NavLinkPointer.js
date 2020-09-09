@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { palette } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import { palette } from '../../styles/colors';
 
 const Pointer = styled.span`
   font-size: 2em;
@@ -26,9 +26,9 @@ const Pointer = styled.span`
     animation-iteration-count: infinite;
     animation-fill-mode: both;
   }
-`
+`;
 const NavLinkPointer = () => {
-  return <Pointer className="point">☟</Pointer>
-}
+  return <Pointer className="point">☟</Pointer>;
+};
 
-export default NavLinkPointer
+export default NavLinkPointer;

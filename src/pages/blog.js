@@ -1,13 +1,13 @@
-import React from "react"
-import BlogsHome from "../components/blogs/BlogsHome"
-import { graphql } from "gatsby"
+import React from 'react';
+import BlogsHome from '../components/blogs/BlogsHome';
+import { graphql } from 'gatsby';
 
 const Blog = ({ data }) => {
-  const blogs = data.allMarkdownRemark.edges.map(edge => edge.node) || null
-  return <BlogsHome blogs={blogs} />
-}
+  const blogs = data.allMarkdownRemark.edges.map((edge) => edge.node) || null;
+  return <BlogsHome blogs={blogs} />;
+};
 
-export default Blog
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -35,4 +35,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

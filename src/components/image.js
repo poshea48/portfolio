@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Image = ({ image, style = {} }) => {
   const data = useStaticQuery(graphql`
@@ -41,9 +41,9 @@ const Image = ({ image, style = {} }) => {
         }
       }
     }
-  `)
+  `);
 
-  return <Img fluid={data[image].childImageSharp.fluid} style={style} />
-}
+  return <Img fluid={data[image].childImageSharp.fluid} style={style} />;
+};
 
-export default Image
+export default Image;

@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import ChatBubble from "./ChatBubble"
-import NavLinkPointer from "./NavLinkPointer"
-import { Link } from "gatsby"
-import { blues } from "../../styles/colors"
-import scrollTo from "gatsby-plugin-smoothscroll"
+import React from 'react';
+import styled from 'styled-components';
+import ChatBubble from './ChatBubble';
+import NavLinkPointer from './NavLinkPointer';
+import { Link } from 'gatsby';
+import { blues } from '../../styles/colors';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Container = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const Container = styled.div`
   @media (max-width: 450px) {
     display: none;
   }
-`
+`;
 
 const NavLink = styled(Link)`
   display: flex;
@@ -69,7 +69,7 @@ const NavLink = styled(Link)`
     justify-content: flex-start;
     margin-bottom: 0;
   }
-`
+`;
 
 const Nav = styled.div`
   display: flex;
@@ -112,20 +112,21 @@ const Nav = styled.div`
     justify-content: center;
     margin-bottom: 0;
   }
-`
+`;
 const Navbar = () => {
   return (
     <Container>
-      <Nav onClick={() => scrollTo("#projects")}>
+      <Nav onClick={() => scrollTo('#projects')}>
         <span className="title">My Projects</span>
         <NavLinkPointer />
       </Nav>
       <NavLink to="/contact">
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <span className="title">Let's Chat</span>
         <ChatBubble />
       </NavLink>
     </Container>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

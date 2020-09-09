@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
-import { palette } from "../styles/colors"
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
+import { palette } from '../styles/colors';
 
 const StyledWaterBackground = styled(BackgroundImage)`
   top: 0;
@@ -23,11 +23,11 @@ const StyledWaterBackground = styled(BackgroundImage)`
   /* @media (max-width: 500px) {
     padding: 1em;
   } */
-`
+`;
 const style = {
-  position: "absolute",
-  backgroundPosition: "0 50%",
-}
+  position: 'absolute',
+  backgroundPosition: '0 50%',
+};
 
 const WaterBackground = ({ children }) => (
   <StaticQuery
@@ -42,8 +42,8 @@ const WaterBackground = ({ children }) => (
         }
       }
     `}
-    render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
+    render={(data) => {
+      const imageData = data.desktop.childImageSharp.fluid;
       return (
         <StyledWaterBackground
           fluid={imageData}
@@ -52,9 +52,9 @@ const WaterBackground = ({ children }) => (
         >
           {children}
         </StyledWaterBackground>
-      )
+      );
     }}
   />
-)
+);
 
-export default WaterBackground
+export default WaterBackground;

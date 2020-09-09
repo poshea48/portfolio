@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import SEO from "../components/seo"
-import { palette } from "../styles/colors"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
+import SEO from '../components/seo';
+import { palette } from '../styles/colors';
 
-const linkRed = "#880618"
+const linkRed = '#880618';
 
 const Container = styled.div`
   display: flex;
@@ -57,16 +57,16 @@ const Container = styled.div`
   .nav-footer {
     align-self: center;
   }
-`
+`;
 
 const EndOfStory = styled.div`
   width: 75%;
   margin: 0 auto;
   border-bottom: 1px solid ${palette.darkGray};
-`
+`;
 const BlogTemplate = ({ data, pageContext }) => {
-  const { html, frontmatter } = data.markdownRemark
-  const { prev, next } = pageContext
+  const { html, frontmatter } = data.markdownRemark;
+  const { prev, next } = pageContext;
 
   return (
     <Container>
@@ -105,10 +105,10 @@ const BlogTemplate = ({ data, pageContext }) => {
         </ul>
       </nav>
     </Container>
-  )
-}
+  );
+};
 
-export default BlogTemplate
+export default BlogTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -125,4 +125,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

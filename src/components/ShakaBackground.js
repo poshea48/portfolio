@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
-import { palette } from "../styles/colors"
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
+import { palette } from '../styles/colors';
 
 const StyledShakaBackground = styled(BackgroundImage)`
   -webkit-background-size: cover;
@@ -22,14 +22,14 @@ const StyledShakaBackground = styled(BackgroundImage)`
     background-attachment: scroll !important;
     background-position: 100% center;
   }
-`
+`;
 const style = {
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-}
+  width: '100%',
+  height: '100%',
+  position: 'absolute',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+};
 const ShakaBackground = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -43,8 +43,8 @@ const ShakaBackground = ({ children }) => (
         }
       }
     `}
-    render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
+    render={(data) => {
+      const imageData = data.desktop.childImageSharp.fluid;
       return (
         <StyledShakaBackground
           fluid={imageData}
@@ -53,9 +53,9 @@ const ShakaBackground = ({ children }) => (
         >
           {children}
         </StyledShakaBackground>
-      )
+      );
     }}
   />
-)
+);
 
-export default ShakaBackground
+export default ShakaBackground;

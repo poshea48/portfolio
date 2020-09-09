@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import Project from "./Project"
-import AirportBackground from "../AirportBackground"
-import { palette } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import Project from './Project';
+import AirportBackground from '../AirportBackground';
+import { palette } from '../../styles/colors';
 
 const projects = {
   // beachCleanup: {
@@ -12,34 +12,34 @@ const projects = {
   //   link: "https://marine-debris-cleanup.herokuapp.com/"
   // }
   mockDraft: {
-    name: "Mock Draft",
+    name: 'Mock Draft',
     description:
-      "Create and control a mock draft for any NFL team or your own Fantasy Football team",
-    img: "mockDraft",
-    link: "https://mock-it-up.netlify.com/",
+      'Create and control a mock draft for any NFL team or your own Fantasy Football team',
+    img: 'mockDraft',
+    link: 'https://mock-it-up.netlify.com/',
   },
   hoursTracker: {
-    name: "Hours Tracker",
+    name: 'Hours Tracker',
     description:
-      "App that keeps track of a user’s hours worked daily with ability to view cumulative hours worked over each week and month.",
-    img: "hoursTracker",
-    link: "https://po-hours-tracker.herokuapp.com",
+      'App that keeps track of a user’s hours worked daily with ability to view cumulative hours worked over each week and month.',
+    img: 'hoursTracker',
+    link: 'https://po-hours-tracker.herokuapp.com',
   },
   rbPhotos: {
-    name: "Photo Gallery",
+    name: 'Photo Gallery',
     description:
-      "E-commerce site for a local photographer to showcase and sell their work.",
-    img: "rbPhotos",
-    link: "https://ryanbrewerphotography.now.sh",
+      'E-commerce site for a local photographer to showcase and sell their work.',
+    img: 'rbPhotos',
+    link: 'https://ryanbrewerphotography.now.sh',
   },
   tournTracker: {
-    name: "Tournament Tracker",
+    name: 'Tournament Tracker',
     description:
-      "Create and track Volleyball Tournaments.  With in-game functionality",
-    img: "tournTracker",
-    link: "https://po-tournament-tracker.herokuapp.com",
+      'Create and track Volleyball Tournaments.  With in-game functionality',
+    img: 'tournTracker',
+    link: 'https://po-tournament-tracker.herokuapp.com',
   },
-}
+};
 
 const Container = styled.section`
   display: flex;
@@ -47,7 +47,7 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   z-index: 20;
-`
+`;
 const ProjectTitle = styled.header`
   position: sticky;
   display: flex;
@@ -73,7 +73,7 @@ const ProjectTitle = styled.header`
       font-size: 1.8em;
     }
   }
-`
+`;
 //! Need a better element for accessiblity
 const ScrollUp = styled.div`
   position: absolute;
@@ -98,25 +98,25 @@ const ScrollUp = styled.div`
       display: none;
     }
   }
-`
+`;
 const ProjectsContainer = styled.div`
   position: relative;
   align-self: center;
   width: 100%;
-`
+`;
 
 const Projects = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding-top: 1em;
-`
+`;
 const ProjectsHome = () => {
   return (
     <Container>
       <AirportBackground />
       <ProjectTitle id="projects">
-        <ScrollUp onClick={() => scrollTo("#home")}>
+        <ScrollUp onClick={() => scrollTo('#home')}>
           <div className="icon">❮</div>
           <span>Home</span>
         </ScrollUp>
@@ -130,7 +130,7 @@ const ProjectsHome = () => {
         </Projects>
       </ProjectsContainer>
     </Container>
-  )
-}
+  );
+};
 
-export default ProjectsHome
+export default ProjectsHome;

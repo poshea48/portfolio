@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { blues } from "../styles/colors"
-import StyledShakaBackground from "./ShakaBackground"
-import Navigation from "./nav/Navigation"
+import React from 'react';
+import styled from 'styled-components';
+import { blues } from '../styles/colors';
+import StyledShakaBackground from './ShakaBackground';
+import Navigation from './nav/Navigation';
 
 const Container = styled.section`
   position: relative;
@@ -10,7 +10,7 @@ const Container = styled.section`
   height: 100vh;
   padding-bottom: 1em;
   box-sizing: border-box;
-`
+`;
 
 const Content = styled.div`
   position: relative;
@@ -21,7 +21,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`
+`;
 const Header = styled.div`
   display: flex;
   position: sticky;
@@ -42,7 +42,7 @@ const Header = styled.div`
   @media (max-width: 400px) {
     padding: 2em 2em 0 0.5em;
   }
-`
+`;
 
 const Name = styled.div`
   text-transform: uppercase;
@@ -88,7 +88,7 @@ const Name = styled.div`
       font-size: 2em;
     }
   }
-`
+`;
 const Home = () => {
   return (
     <Container id="home">
@@ -97,13 +97,14 @@ const Home = () => {
         <Header>
           <Navigation />
           <Name>
-            <h1>Paul O'Shea</h1>
+            {/* eslint-disable-next-line prettier/prettier */}
+            <h1>{"Paul O'Shea"}</h1>
             <h3>Full Stack Developer</h3>
           </Name>
         </Header>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

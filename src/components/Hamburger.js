@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect, useRef } from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { palette, blues } from "../styles/colors"
-import NavLinkPointer from "./NavLinkPointer"
-import ChatBubble from "./ChatBubble"
-import OverlayContext from "./OverlayContext"
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { palette, blues } from '../styles/colors';
+import NavLinkPointer from './NavLinkPointer';
+import ChatBubble from './ChatBubble';
+import OverlayContext from './OverlayContext';
 
 const Container = styled.div`
   display: none;
@@ -22,7 +22,7 @@ const Container = styled.div`
   .burger div {
     background-color: ${blues.gunMetal};
     border-radius: 3px;
-    content: "";
+    content: '';
     display: block;
     height: 5px;
     margin: 7px 0;
@@ -57,9 +57,9 @@ const Container = styled.div`
     display: flex;
     left: 0.5em;
   }
-`
+`;
 const ModalWindow = styled.div`
-  display: ${p => (p.status === "open" ? "flex" : "none")};
+  display: ${(p) => (p.status === 'open' ? 'flex' : 'none')};
   z-index: 25;
   padding: 1em;
   @keyframes open {
@@ -141,7 +141,7 @@ const ModalWindow = styled.div`
       height: 0;
     }
   }
-  animation-name: ${p => p.status};
+  animation-name: ${(p) => p.status};
   animation-duration: 0.3s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -150,7 +150,7 @@ const ModalWindow = styled.div`
   flex-direction: column;
   justify-content: space-around;
   background: ${palette.darkGray};
-`
+`;
 
 const NavLink = styled(Link)`
   display: flex;
@@ -186,30 +186,30 @@ const NavLink = styled(Link)`
     animation-iteration-count: infinite;
     animation-fill-mode: both;
   }
-`
-const Hamburger = props => {
-  const { overlayOn, changeOverlay } = useContext(OverlayContext)
-  const [status, changeStatus] = useState(overlayOn ? "open" : "closed")
-  const [open, setOpen] = useState(false)
-  const node = useRef()
+`;
+const Hamburger = (props) => {
+  const { overlayOn, changeOverlay } = useContext(OverlayContext);
+  const [status, changeStatus] = useState(overlayOn ? 'open' : 'closed');
+  const [open, setOpen] = useState(false);
+  const node = useRef();
 
   const toggleBurger = () => {
-    if (open) {
+    // if (open) {
+    // }
+    if (status === 'closed') {
+      changeOverlay(true);
+      changeStatus('open');
+    } else if (status === 'open') {
+      changeOverlay(false);
+      changeStatus('closed');
     }
-    if (status === "closed") {
-      changeOverlay(true)
-      changeStatus("open")
-    } else if (status === "open") {
-      changeOverlay(false)
-      changeStatus("closed")
-    }
-  }
+  };
 
   return (
     <Container>
-      <div className={`burger ${status}`} onClick={toggleBurger}>
+      <button className={`burger ${status}`} onClick={toggleBurger}>
         <div></div>
-      </div>
+      </button>
       <ModalWindow open={open}>
         <NavLink to="/contact">
           <span className="title">Lets Chat</span>
@@ -222,7 +222,7 @@ const Hamburger = props => {
         </NavLink>
       </ModalWindow>
     </Container>
-  )
-}
+  );
+};
 
-export default Hamburger
+export default Hamburger;

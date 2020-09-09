@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { blues } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import { blues } from '../../styles/colors';
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -20,21 +20,21 @@ const StyledBurger = styled.button`
   div {
     width: 1.8rem;
     height: 0.22rem;
-    background: ${p => (p.open ? blues.laurelGreen : blues.maastrict)};
+    background: ${(p) => (p.open ? blues.laurelGreen : blues.maastrict)};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     &:first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
     &:nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(30px)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? '0' : '1')};
+      transform: ${({ open }) => (open ? 'translateX(30px)' : 'translateX(0)')};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 
@@ -44,7 +44,7 @@ const StyledBurger = styled.button`
       width: 1.5em;
     }
   }
-`
+`;
 const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger
@@ -56,7 +56,7 @@ const Burger = ({ open, setOpen }) => {
       <div></div>
       <div></div>
     </StyledBurger>
-  )
-}
+  );
+};
 
-export default Burger
+export default Burger;

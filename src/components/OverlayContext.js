@@ -1,5 +1,5 @@
-import React, { createContext } from "react"
+import React, { createContext } from 'react';
 
-const OverlayContext = createContext()
+const OverlayContext = createContext();
 
-export default OverlayContext
+export default OverlayContext;

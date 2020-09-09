@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { blues } from "../../styles/colors"
-import scrollTo from "gatsby-plugin-smoothscroll"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { blues } from '../../styles/colors';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const StyledWindow = styled.nav`
   display: flex;
@@ -12,13 +12,13 @@ const StyledWindow = styled.nav`
   padding: 2.5rem 2rem 1rem 2rem;
   width: 250px;
   /* height: 150px; */
-  transform: ${({ open }) => (open ? "translateX(0em)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? 'translateX(0em)' : 'translateX(-100%)')};
   transition: transform 0.3s ease-in-out;
   top: -0.5em;
   left: -2em;
   text-align: center;
   border-radius: 0 20px 20px 0;
-`
+`;
 
 const Nav = styled.nav`
   display: flex;
@@ -39,9 +39,9 @@ const Nav = styled.nav`
       transform: scale(1.2);
     }
   }
-`
+`;
 const Window = ({ open }) => {
-  const handleScroll = () => scrollTo("#projects")
+  const handleScroll = () => scrollTo('#projects');
   return (
     <StyledWindow open={open}>
       <Nav>
@@ -57,7 +57,7 @@ const Window = ({ open }) => {
         <Link to="/blog">Blog</Link>
       </Nav>
     </StyledWindow>
-  )
-}
+  );
+};
 
-export default Window
+export default Window;

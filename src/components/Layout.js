@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import Seo from "./seo"
-import Home from "./Home"
-import ProjectsHome from "./projects/ProjectsHome"
-import { palette } from "../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import Seo from './seo';
+import Home from './Home';
+import ProjectsHome from './projects/ProjectsHome';
+import { palette } from '../styles/colors';
 
 const Container = styled.main`
   display: flex;
@@ -14,7 +14,7 @@ const Container = styled.main`
   background-color: ${palette.lightGray};
   font-family: Playfair Display, serif;
   perspective: 2px;
-`
+`;
 const Layout = () => {
   return (
     <Container>
@@ -22,7 +22,7 @@ const Layout = () => {
       <Home />
       <ProjectsHome />
     </Container>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

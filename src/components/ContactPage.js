@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
-import WaterBackground from "./WaterBackground"
-import { palette, ocean } from "../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
+import WaterBackground from './WaterBackground';
+import { palette, ocean } from '../styles/colors';
 
 const Wrapper = styled.div`
   position: relative;
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const LinksContainer = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ const LinksContainer = styled.div`
     text-transform: uppercase;
     /* padding: 0.5em 0; */
   }
-`
+`;
 const Content = styled.div`
   flex-basis: 1 auto;
   overflow: scroll;
@@ -83,7 +83,7 @@ const Content = styled.div`
   li {
     color: ${palette.mediumGray};
   }
-  img[alt="its Paul"] {
+  img[alt='its Paul'] {
     width: 100px;
     border-radius: 100%;
   }
@@ -104,7 +104,7 @@ const Content = styled.div`
     color: ${palette.mediumGray};
     text-align: center;
   }
-`
+`;
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -115,8 +115,8 @@ const ContactPage = () => {
         }
       }
     }
-  `)
-  const { html } = data.markdownRemark
+  `);
+  const { html } = data.markdownRemark;
   return (
     <Wrapper>
       <WaterBackground />
@@ -127,7 +127,7 @@ const ContactPage = () => {
       </LinksContainer>
       <Content dangerouslySetInnerHTML={{ __html: html }} />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

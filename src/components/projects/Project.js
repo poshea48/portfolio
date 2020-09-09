@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import Image from "../image"
-import { palette, ocean } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import Image from '../image';
+import { palette, ocean } from '../../styles/colors';
 
 const Container = styled.div`
   align-self: center;
@@ -21,7 +21,7 @@ const Container = styled.div`
       text-decoration: underline;
     }
   }
-`
+`;
 
 const Title = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const Title = styled.div`
     border-radius: 15px;
     /* color: ${palette.lightGray}; */
     /* color: ${ocean.celestial}; */
-    color: #F0C50B;
+    color: #f0c50b;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -46,29 +46,29 @@ const Title = styled.div`
       transition: all 0.3s ease-in-out;
     } */
   }
-`
+`;
 const Link = styled.a`
   text-decoration: none;
-`
+`;
 
 const ImageContainer = styled.div`
   width: 100%;
-`
+`;
 
 const Project = ({ image }) => {
-  const { name, img, link } = image
+  const { name, img, link } = image;
   return (
     <Container>
       <Link href={link} target="_blank" rel="noopener">
         <Title>
-          <h3>{name}</h3>{" "}
+          <h3>{name}</h3>{' '}
         </Title>
         <ImageContainer>
-          <Image image={img} style={{ borderRadius: "0 0 30px 30px" }} />
+          <Image image={img} style={{ borderRadius: '0 0 30px 30px' }} />
         </ImageContainer>
       </Link>
     </Container>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

@@ -1,6 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { palette } from '../../styles/colors';
 const StyledLink = styled(Link)`
   display: flex;
   text-decoration: none;
@@ -49,9 +50,9 @@ const StyledLink = styled(Link)`
     flex-direction: column;
     justify-content: center;
   }
-`
+`;
 const NavLink = ({ children, to }) => {
-  return <StyledLink to={to}>{children}</StyledLink>
-}
+  return <StyledLink to={to}>{children}</StyledLink>;
+};
 
-export default NavLink
+export default NavLink;

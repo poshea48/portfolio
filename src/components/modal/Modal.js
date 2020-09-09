@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react"
-import Window from "./Window"
-import Burger from "./Burger"
-import styled from "styled-components"
-import { useOnClickOutside } from "../hooks"
+import React, { useState, useRef } from 'react';
+import Window from './Window';
+import Burger from './Burger';
+import styled from 'styled-components';
+import { useOnClickOutside } from '../hooks';
 
 const Container = styled.div`
   /* position: absolute; */
@@ -23,17 +23,17 @@ const Container = styled.div`
   @media (max-width: 350px) {
     display: flex;
   }
-`
+`;
 const Modal = () => {
-  const [open, setOpen] = useState(false)
-  const node = useRef()
-  useOnClickOutside(node, () => setOpen(false))
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
   return (
     <Container ref={node}>
       <Burger open={open} setOpen={setOpen} />
       <Window open={open} />
     </Container>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

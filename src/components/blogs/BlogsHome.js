@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { palette } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { palette } from '../../styles/colors';
 
 const Container = styled.div`
   position: relative;
@@ -25,7 +25,7 @@ const Container = styled.div`
     font-weight: 900;
     font-size: 20px;
   }
-`
+`;
 const List = styled.ul`
   margin: 2em auto 0 auto;
   display: flex;
@@ -38,7 +38,7 @@ const List = styled.ul`
   a {
     text-decoration: none;
   }
-`
+`;
 
 const ListItem = styled.li`
   display: flex;
@@ -69,14 +69,14 @@ const ListItem = styled.li`
     align-self: flex-start;
     color: #23557b;
   }
-`
+`;
 const BlogsHome = ({ blogs }) => {
   return (
     <Container>
       <h1>My Thoughts</h1>
 
       <List>
-        {blogs.map(blog => (
+        {blogs.map((blog) => (
           <li key={blog.id}>
             <Link to={`${blog.fields.slug}`}>
               <ListItem>
@@ -95,7 +95,7 @@ const BlogsHome = ({ blogs }) => {
         Home
       </Link>
     </Container>
-  )
-}
+  );
+};
 
-export default BlogsHome
+export default BlogsHome;

@@ -1,18 +1,25 @@
-import { useEffect } from "react"
+import { useEffect } from 'react';
 
+/**
+ * @param {{ current: { contains: (arg0: any) => any; }; }} ref
+ * @param {(arg0: { target: any; }) => void} handler
+ */
 const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
-    const listener = event => {
+    /**
+     * @param {{ target: any; }} event
+     */
+    const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
-        return
+        return;
       }
-      handler(event)
-    }
-    document.addEventListener("mousedown", listener)
+      handler(event);
+    };
+    document.addEventListener('mousedown', listener);
     return () => {
-      document.removeEventListener("mousedown", listener)
-    }
-  }, [ref, handler])
-}
+      document.removeEventListener('mousedown', listener);
+    };
+  }, [ref, handler]);
+};
 
-export { useOnClickOutside }
+export { useOnClickOutside };

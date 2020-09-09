@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { palette } from "../../styles/colors"
+import React from 'react';
+import styled from 'styled-components';
+import { palette } from '../../styles/colors';
 
 const Container = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
   width: 40px;
   align-self: center;
-`
+`;
 const Bubble = styled.div`
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ const Bubble = styled.div`
     }
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 0;
@@ -63,7 +63,7 @@ const Bubble = styled.div`
     margin-left: -10px;
     margin-bottom: -20px;
   }
-`
+`;
 const ChatBubble = () => {
   return (
     <Container>
@@ -73,7 +73,7 @@ const ChatBubble = () => {
         <span>.</span>
       </Bubble>
     </Container>
-  )
-}
+  );
+};
 
-export default ChatBubble
+export default ChatBubble;

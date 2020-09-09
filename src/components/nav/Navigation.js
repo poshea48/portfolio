@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import { blues } from "../../styles/colors"
-import Modal from "../modal/Modal"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import { blues } from '../../styles/colors';
+import Modal from '../modal/Modal';
 
 const Container = styled.div`
   position: absolute;
@@ -22,7 +22,7 @@ const Container = styled.div`
   @media (max-width: 350px) {
     left: 0.5em;
   }
-`
+`;
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -50,10 +50,10 @@ const Nav = styled.nav`
   a {
     margin: 0 0.5em;
   }
-`
+`;
 
 const Navigation = () => {
-  const handleScrollTo = () => scrollTo("#projects")
+  const handleScrollTo = () => scrollTo('#projects');
   return (
     <Container>
       <Modal />
@@ -70,7 +70,7 @@ const Navigation = () => {
         <Link to="/blog">Blog</Link>
       </Nav>
     </Container>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
