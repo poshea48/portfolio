@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { blues } from '../../styles/colors';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import NavLinks from '../nav/NavLinks';
 
-const StyledWindow = styled.nav`
+const StyledWindow = styled.div`
   display: flex;
   position: absolute;
 
@@ -20,42 +20,31 @@ const StyledWindow = styled.nav`
   border-radius: 0 20px 20px 0;
 `;
 
-const Nav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-  a,
-  span {
-    font-size: 16px;
-    text-decoration: none;
-    margin: 1em;
-    color: ${blues.un};
-    font-weight: 900;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+// const Nav = styled.nav`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   width: 100%;
+//   a,
+//   span {
+//     font-size: 16px;
+//     text-decoration: none;
+//     margin: 1em;
+//     color: ${blues.un};
+//     font-weight: 900;
+//     cursor: pointer;
+//     transition: all 0.3s ease-in-out;
 
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-`;
+//     &:hover {
+//       transform: scale(1.2);
+//     }
+//   }
+// `;
+
 const Window = ({ open }) => {
-  const handleScroll = () => scrollTo('#projects');
   return (
     <StyledWindow open={open}>
-      <Nav>
-        <span
-          tabIndex="0"
-          role="button"
-          onClick={handleScroll}
-          onKeyDown={handleScroll}
-        >
-          Projects
-        </span>
-        <Link to="/contact">Contact</Link>
-        <Link to="/blog">Blog</Link>
-      </Nav>
+      <NavLinks mobile={true} />
     </StyledWindow>
   );
 };

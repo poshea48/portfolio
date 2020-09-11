@@ -6,9 +6,8 @@ import { useEffect } from 'react';
  */
 const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
-    /**
-     * @param {{ target: any; }} event
-     */
+    if (typeof window === 'undefined') return;
+
     const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
