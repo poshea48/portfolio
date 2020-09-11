@@ -187,7 +187,7 @@ const NavLink = styled(Link)`
     animation-fill-mode: both;
   }
 `;
-const Hamburger = (props) => {
+const Hamburger = () => {
   const { overlayOn, changeOverlay } = useContext(OverlayContext);
   const [status, changeStatus] = useState(overlayOn ? 'open' : 'closed');
   const [open, setOpen] = useState(false);

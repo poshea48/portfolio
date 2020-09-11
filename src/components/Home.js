@@ -4,31 +4,22 @@ import { blues } from '../styles/colors';
 import StyledShakaBackground from './ShakaBackground';
 import Navigation from './nav/Navigation';
 
-const Container = styled.section`
+const Container = styled.main`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 100vw;
   height: 100vh;
   padding-bottom: 1em;
   box-sizing: border-box;
 `;
 
-const Content = styled.div`
-  position: relative;
-  /* top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`;
-const Header = styled.div`
-  display: flex;
+const Header = styled.header`
   position: sticky;
+  width: 100%;
   top: 0;
   left: 0;
-  flex-direction: column;
-  justify-content: flex-start;
   text-transform: uppercase;
   font-family: Playfair Display, serif;
   background-color: ${blues.unRgba};
@@ -36,12 +27,20 @@ const Header = styled.div`
   padding: 3em 0 0 0;
 
   @media (max-width: 550px) {
-    padding: 2em 3em 0 1em;
+    padding: 2em 3em 0 0;
   }
 
   @media (max-width: 400px) {
-    padding: 2em 2em 0 0.5em;
+    padding: 2em 1em 0 0em;
   }
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
 `;
 
 const Name = styled.div`
@@ -59,7 +58,7 @@ const Name = styled.div`
     font-size: 3em;
     margin: 0;
   }
-  h3 {
+  h2 {
     align-self: center;
     font-size: 1.3em;
     margin: 0.5em 0 0.5em 0;
@@ -71,7 +70,7 @@ const Name = styled.div`
       /* font-size: 2.2em; */
       align-self: flex-end;
     }
-    h3 {
+    h2 {
       align-self: flex-end;
       font-size: 1em;
     }
@@ -93,16 +92,16 @@ const Home = () => {
   return (
     <Container id="home">
       <StyledShakaBackground />
-      <Content>
-        <Header>
+      <Header>
+        <Content>
           <Navigation />
           <Name>
             {/* eslint-disable-next-line prettier/prettier */}
             <h1>{"Paul O'Shea"}</h1>
-            <h3>Full Stack Developer</h3>
+            <h2>Full Stack Developer</h2>
           </Name>
-        </Header>
-      </Content>
+        </Content>
+      </Header>
     </Container>
   );
 };
