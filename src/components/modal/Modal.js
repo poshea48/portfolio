@@ -20,12 +20,18 @@ const Container = styled.div`
 const Modal = () => {
   const [open, setOpen] = useState(false);
   const node = useRef(null);
+
   useOnClickOutside(node, () => {
     setOpen(false);
   });
-
+  const keyUpHandler = (e) => {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      node.current.focus();
+    }
+  };
   return (
-    <Container ref={node}>
+    <Container ref={node} onKeyUp={keyUpHandler}>
       <Burger open={open} setOpen={setOpen} />
       <Window open={open} />
     </Container>
