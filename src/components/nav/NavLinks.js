@@ -74,15 +74,9 @@ const NavLinks = ({ mobile }) => {
   return (
     <List mobile={mobile}>
       <li>
-        <span
-          tabIndex="0"
-          ref={linkRef}
-          role="button"
-          onClick={handleScrollTo}
-          onKeyDown={handleScrollTo}
-        >
+        <Link to="/projects" ref={linkRef} role="button">
           Projects
-        </span>
+        </Link>
       </li>
       <li>
         <Link to="/contact">Contact</Link>

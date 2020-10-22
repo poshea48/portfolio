@@ -1,8 +1,14 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Home from '../components/Home';
+import Seo from '../components/seo';
 
 const contact = () => {
-  return <Layout />;
+  return (
+    <>
+      <Seo title="Paul O'Shea Full Stack Developer" />
+      <Home />
+    </>
+  );
 };
 
 export default contact;

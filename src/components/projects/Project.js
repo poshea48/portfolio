@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import Image from '../image';
 import { palette, ocean } from '../../styles/colors';
 
-const Container = styled.div`
+const Container = styled.li`
   align-self: center;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   background: transparent;
   margin: 0.5em;
-  max-width: 700px;
-  width: 80%;
+  max-width: 500px;
+  min-width: 250px;
   margin-bottom: 1em;
   transition: all 0.3s ease-in-out;
   &:hover {

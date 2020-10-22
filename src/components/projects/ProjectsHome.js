@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import Project from './Project';
 import AirportBackground from '../AirportBackground';
 import { palette } from '../../styles/colors';
-
+import Header from '../Header';
 const projects = {
   // beachCleanup: {
   //   name: "Beach Cleanup App",
@@ -41,94 +41,36 @@ const projects = {
   },
 };
 
-const Container = styled.section`
+const Container = styled.main`
   display: flex;
+  flex: 1;
   position: relative;
   flex-direction: column;
-  justify-content: center;
-  z-index: 20;
-`;
-const ProjectTitle = styled.header`
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: ${palette.lightGray};
-  align-self: center;
-  top: 0;
-  height: 55px;
-  width: 100%;
-  z-index: 20;
-  opacity: 0.9;
-  h1 {
-    font-weight: 900;
-    font-size: 2em;
-    text-align: center;
-    margin: 0;
-    color: ${palette.darkGray};
-  }
-
-  @media (max-width: 500px) {
-    h1 {
-      font-size: 1.8em;
-    }
-  }
-`;
-//! Need a better element for accessiblity
-const ScrollUp = styled.div`
-  position: absolute;
-  width: 120px;
-  cursor: pointer;
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
-  font-size: 16px;
-  top: 0.5em;
-  left: 1.5em;
-  span {
-    display: block;
-    margin-left: 0.4em;
-  }
-  .icon {
-    transform: rotate(90deg);
-    font-size: 30px;
-  }
-  @media (max-width: 480px) {
-    span {
-      display: none;
-    }
-  }
-`;
-const ProjectsContainer = styled.div`
-  position: relative;
-  align-self: center;
-  width: 100%;
+  background-color: ${palette.mediumGray};
+  z-index: 20;
+  width: 100vw;
+  min-height: 100vh;
 `;
 
-const Projects = styled.div`
+const Projects = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  padding: 0;
+  margin: 0;
   padding-top: 1em;
+  height: 100%;
 `;
 const ProjectsHome = () => {
   return (
     <Container>
-      <AirportBackground />
-      <ProjectTitle id="projects">
-        <ScrollUp onClick={() => scrollTo('#home')}>
-          <div className="icon">❮</div>
-          <span>Home</span>
-        </ScrollUp>
-        <h1>My Projects</h1>
-      </ProjectTitle>
-      <ProjectsContainer>
-        <Projects>
-          {Object.keys(projects).map((project, i) => (
-            <Project key={i} image={projects[project]} />
-          ))}
-        </Projects>
-      </ProjectsContainer>
+      <Header />
+      <Projects>
+        {Object.keys(projects).map((project, i) => (
+          <Project key={i} image={projects[project]} />
+        ))}
+      </Projects>
     </Container>
   );
 };
