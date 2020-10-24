@@ -20,7 +20,6 @@ const Container = styled.nav`
 `;
 
 const Navigation = ({ page }) => {
-  console.log('inside navigation, ', page);
   return (
     <Container>
       <Modal page={page} />

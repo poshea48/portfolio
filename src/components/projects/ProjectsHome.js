@@ -1,7 +1,7 @@
 import React from 'react';
-import styled, { ThemeConsumer } from 'styled-components';
+import styled from 'styled-components';
 import Project from './Project';
-import { palette, blues } from '../../styles/colors';
+import { blues } from '../../styles/colors';
 import Header from '../Header';
 const projects = {
   // beachCleanup: {
@@ -45,7 +45,7 @@ const Container = styled.main`
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #252725;
+  background-color: ${blues.dark};
   z-index: 20;
   width: 100vw;
   min-height: 100vh;

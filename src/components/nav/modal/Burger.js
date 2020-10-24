@@ -25,8 +25,7 @@ const StyledBurger = styled.button`
   div {
     width: 100%;
     height: 3px;
-    /* background: ${(p) => (p.open ? blues.laurelGreen : blues.maastrict)}; */
-    background: ${blues.maastrict};
+    background-color: ${blues.dark};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -55,7 +54,6 @@ const StyledBurger = styled.button`
   }
 `;
 const Burger = ({ open, setOpen }) => {
-  console.log('inside Burger');
   return (
     <StyledBurger
       aria-label="navigation button"

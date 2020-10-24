@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blues, palette } from '../styles/colors';
+import { blues } from '../styles/colors';
 import Navigation from './nav/Navigation';
 
 const Container = styled.header`
@@ -79,14 +79,15 @@ const Name = styled.div`
     }
   }
 `;
+// eslint-disable-next-line quotes
+var myName = "Paul O'Shea";
 const Header = ({ page }) => {
   return (
     <Container page={page}>
       <Content>
         <Navigation page={page} />
         <Name page={page}>
-          {/* eslint-disable-next-line prettier/prettier */}
-          <h1>{"Paul O'Shea"}</h1>
+          <h1>{myName}</h1>
           <h2>JavaScript Developer</h2>
         </Name>
       </Content>
