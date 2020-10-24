@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blues } from '../../styles/colors';
-import scrollTo from 'gatsby-plugin-smoothscroll';
-import NavLinks from '../nav/NavLinks';
+import { blues } from '../../../styles/colors';
+import NavLinks from '../NavLinks';
 
 const StyledWindow = styled.div`
   display: flex;
   position: absolute;
 
-  background: ${blues.gunMetal};
+  background: ${blues.dark};
   padding: 2.5rem 2rem 1rem 2rem;
   width: 250px;
   /* height: 150px; */
@@ -41,10 +40,11 @@ const StyledWindow = styled.div`
 //   }
 // `;
 
-const Window = ({ open }) => {
+const Window = ({ open, page }) => {
+  console.log(('inside Window, ', page));
   return (
     <StyledWindow open={open}>
-      <NavLinks mobile={true} />
+      <NavLinks mobile={true} page={page} />
     </StyledWindow>
   );
 };

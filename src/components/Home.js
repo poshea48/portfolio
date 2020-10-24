@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <Container id="home">
       <StyledShakaBackground />
-      <Header />
+      <Header page="home" />
     </Container>
   );
 };

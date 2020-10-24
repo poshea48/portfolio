@@ -68,15 +68,21 @@ const List = styled.ul`
     }
   }
 `;
-const NavLinks = ({ mobile }) => {
-  const handleScrollTo = () => scrollTo('#projects');
+const NavLinks = ({ mobile, page }) => {
   const linkRef = useRef(null);
+  console.log(page);
   return (
     <List mobile={mobile}>
       <li>
-        <Link to="/projects" ref={linkRef} role="button">
-          Projects
-        </Link>
+        {page == 'home' ? (
+          <Link to="/projects" ref={linkRef} role="button">
+            Projects
+          </Link>
+        ) : (
+          <Link to="/" ref={linkRef} role="button">
+            Home
+          </Link>
+        )}
       </li>
       <li>
         <Link to="/contact">Contact</Link>

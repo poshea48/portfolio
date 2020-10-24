@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blues } from '../styles/colors';
+import { blues, palette } from '../styles/colors';
 import Navigation from './nav/Navigation';
 
 const Container = styled.header`
@@ -11,8 +11,8 @@ const Container = styled.header`
   left: 0;
   text-transform: uppercase;
   font-family: Playfair Display, serif;
-  background-color: ${blues.un};
-  box-shadow: 0 0 36px 36px ${blues.un};
+  background-color: ${({ page }) =>
+    page == 'home' ? 'transparent' : '#252725'};
   padding: 3em 0 0 0;
   z-index: 10;
   @media (max-width: 550px) {
@@ -43,7 +43,8 @@ const Name = styled.div`
 
   h1 {
     align-self: center;
-    color: ${blues.gunMetal};
+    color: ${({ page }) =>
+      page == 'home' ? blues.gunMetal : blues.laurelGreen};
     font-weight: 900;
     font-size: 3em;
     margin: 0;
@@ -52,7 +53,7 @@ const Name = styled.div`
     align-self: center;
     font-size: 1.3em;
     margin: 0.5em 0 0.5em 0;
-    color: ${blues.laurelGreen};
+    color: ${({ page }) => (page == 'home' ? blues.laurelGreen : '#F6F6F3')};
   }
 
   @media (max-width: 550px) {
@@ -78,15 +79,15 @@ const Name = styled.div`
     }
   }
 `;
-const Header = () => {
+const Header = ({ page }) => {
   return (
-    <Container>
+    <Container page={page}>
       <Content>
-        <Navigation />
-        <Name>
+        <Navigation page={page} />
+        <Name page={page}>
           {/* eslint-disable-next-line prettier/prettier */}
           <h1>{"Paul O'Shea"}</h1>
-          <h2>Full Stack Developer</h2>
+          <h2>JavaScript Developer</h2>
         </Name>
       </Content>
     </Container>

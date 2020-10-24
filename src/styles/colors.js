@@ -17,10 +17,15 @@ const ocean = {
 const blues = {
   gunMetal: '#2c313d',
   laurelGreen: '#b3b39d',
+  dark: '#252725',
+  lgWhite: '#F6F6F3',
   tufts: '#3d72c0',
   maastrict: '#052039',
   un: '#508fde',
   unRgba: 'rgba(80, 143, 222, .7)',
+  sonicSilver: '#69747C',
+  forestGreen: '#6BAA75',
+  lightGreen: '#84DD63',
 };
 
 export { palette, ocean, blues };

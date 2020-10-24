@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Window from './Window';
 import Burger from './Burger';
 import styled from 'styled-components';
-import { useOnClickOutside } from '../hooks';
+import { useOnClickOutside } from '../../hooks';
 
 const Container = styled.div`
   display: none;
@@ -17,7 +17,7 @@ const Container = styled.div`
     display: flex;
   }
 `;
-const Modal = () => {
+const Modal = ({ page }) => {
   const [open, setOpen] = useState(false);
   const node = useRef(null);
 
@@ -25,15 +25,17 @@ const Modal = () => {
     setOpen(false);
   });
   const keyUpHandler = (e) => {
+    console.log('inside keyUpHandler, ', page);
     if (e.key === 'Escape') {
       setOpen(false);
       node.current.focus();
     }
   };
+  console.log('inside Modal, ', page);
   return (
     <Container ref={node} onKeyUp={keyUpHandler}>
       <Burger open={open} setOpen={setOpen} />
-      <Window open={open} />
+      <Window open={open} page={page} />
     </Container>
   );
 };

@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import styled, { ThemeConsumer } from 'styled-components';
 import Project from './Project';
-import AirportBackground from '../AirportBackground';
-import { palette } from '../../styles/colors';
+import { palette, blues } from '../../styles/colors';
 import Header from '../Header';
 const projects = {
   // beachCleanup: {
@@ -47,7 +45,7 @@ const Container = styled.main`
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${palette.mediumGray};
+  background-color: #252725;
   z-index: 20;
   width: 100vw;
   min-height: 100vh;
@@ -55,17 +53,16 @@ const Container = styled.main`
 
 const Projects = styled.ul`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2em;
   margin: 0;
-  padding-top: 1em;
   height: 100%;
 `;
 const ProjectsHome = () => {
   return (
     <Container>
-      <Header />
+      <Header page="projects" />
       <Projects>
         {Object.keys(projects).map((project, i) => (
           <Project key={i} image={projects[project]} />
