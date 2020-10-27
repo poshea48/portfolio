@@ -24,15 +24,6 @@ const Container = styled.header`
   }
 `;
 
-const Content = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
 const Name = styled.div`
   text-transform: uppercase;
   display: flex;
@@ -84,13 +75,11 @@ var myName = "Paul O'Shea";
 const Header = ({ page }) => {
   return (
     <Container page={page}>
-      <Content>
-        <Navigation page={page} />
-        <Name page={page}>
-          <h1>{myName}</h1>
-          <h2>JavaScript Developer</h2>
-        </Name>
-      </Content>
+      <Navigation page={page} />
+      <Name page={page}>
+        <h1>{myName}</h1>
+        <h2>JavaScript Developer</h2>
+      </Name>
     </Container>
   );
 };

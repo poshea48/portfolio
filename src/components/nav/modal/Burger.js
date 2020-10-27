@@ -22,7 +22,7 @@ const StyledBurger = styled.button`
       open ? 'rgba(80,143,222,.7)' : blues.gunMetal};
   }
   }
-  div {
+  .line {
     width: 100%;
     height: 3px;
     background-color: ${blues.dark};
@@ -61,9 +61,9 @@ const Burger = ({ open, setOpen }) => {
       open={open}
       onClick={() => setOpen(!open)}
     >
-      <div></div>
-      <div></div>
-      <div></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
     </StyledBurger>
   );
 };
