@@ -74,6 +74,9 @@ const Projects = styled.ul`
   padding: 1em 2em 2em 2em;
   margin: 0;
   height: 100%;
+  @media screen and (max-width: 768px) {
+    padding: 1em;
+  }
 `;
 const ProjectsHome = () => {
   return (
