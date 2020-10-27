@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { blues } from '../../../styles/colors';
 
 const StyledBurger = styled.button`
-  position: absolute;
   display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: space-around;
   width: 40px;
@@ -18,40 +20,42 @@ const StyledBurger = styled.button`
   overflow: hidden;
   &:focus {
     outline: none;
-    box-shadow: 0 0 5px 5px ${({ open }) =>
-      open ? 'rgba(80,143,222,.7)' : blues.gunMetal};
+    box-shadow: 0 0 5px 5px
+      ${({ open }) => (open ? blues.lgWhite : blues.gunMetal)};
   }
-  }
-  .line {
-    width: 100%;
-    height: 3px;
-    background-color: ${blues.dark};
-    background: ${blues.dark};
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-    &:first-child {
-      transform: ${({ open }) =>
-        open ? 'translateX(2.5px) rotate(45deg)' : 'rotate(0)'};
-    }
-    &:nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(30px)' : 'translateX(0)')};
-    }
-    &:nth-child(3) {
-      transform: ${({ open }) =>
-        open ? 'translateX(2.5px) rotate(-45deg)' : 'rotate(0)'};
-    }
-  }
-
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     width: 35px;
     height: 35px;
     padding: 8px;
     div {
       height: 3px;
+      z-index: 10;
     }
+  } */
+`;
+
+const Line = styled.div`
+  width: 100%;
+  height: 3px;
+  min-height: 3px;
+  max-height: 3px;
+  background-color: ${blues.gunMetal} !important;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+  z-index: 12;
+  &:first-child {
+    transform: ${({ open }) =>
+      open ? 'translateX(2.5px) rotate(45deg)' : 'rotate(0)'};
+  }
+  &:nth-child(2) {
+    opacity: ${({ open }) => (open ? '0' : '1')};
+    transform: ${({ open }) => (open ? 'translateX(30px)' : 'translateX(0)')};
+  }
+  &:nth-child(3) {
+    transform: ${({ open }) =>
+      open ? 'translateX(2.5px) rotate(-45deg)' : 'rotate(0)'};
   }
 `;
 const Burger = ({ open, setOpen }) => {
@@ -61,9 +65,9 @@ const Burger = ({ open, setOpen }) => {
       open={open}
       onClick={() => setOpen(!open)}
     >
-      <div className="line"></div>
-      <div className="line"></div>
-      <div className="line"></div>
+      <Line open={open} />
+      <Line open={open} />
+      <Line open={open} />
     </StyledBurger>
   );
 };
