@@ -13,7 +13,7 @@ const Container = styled.header`
   font-family: Playfair Display, serif;
   background-color: ${({ page }) =>
     page == 'home' ? 'transparent' : '#252725'};
-  padding: 3em 0 0 0;
+  padding: 3em 0 1em 0;
   z-index: 10;
   @media (max-width: 550px) {
     padding: 2em 3em 0 0;

@@ -6,32 +6,41 @@ import { blues } from '../../styles/colors';
 const Container = styled.li`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 10px;
   background-color: ${blues.lgWhite};
   padding: 1em;
+  max-width: 800px;
   width: 100%;
   margin-bottom: 1em;
+
   &:focus {
     outline: none;
     box-shadow: 0 0 5px 5px ${blues.laurelGreen};
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 const Title = styled.div`
   display: flex;
-  justify-content: center;
-  margin-bottom: 0;
+  justify-content: flex-start;
   border-radius: 30px 30px 0 0;
-
+  margin-bottom: 0.5em;
   h3 {
-    text-align: center;
-    padding: 0.25em;
+    text-align: left;
+    padding: 0;
     border-radius: 15px;
     color: ${blues.dark};
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 0;
+  }
+  @media screen and (max-width: 768px) {
+    h3 {
+      text-align: center;
+    }
   }
 `;
 const Link = styled.a`
@@ -47,16 +56,43 @@ const Link = styled.a`
       text-decoration: underline;
     }
   }
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const ImageContainer = styled.div`
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   position: relative;
 `;
 
+const Description = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% - 200px);
+  height: 100%;
+  margin-left: 4em;
+  .buzz {
+    text-transform: uppercase;
+    color: ${blues.un};
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+    padding-right: 0;
+  }
+`;
+
 const Project = ({ image }) => {
-  const { name, img, link } = image;
+  const { name, img, link, description } = image;
+  const descriptionItems = description.map((item, i) => (
+    <li key={i}>{item}</li>
+  ));
   return (
     <Container>
       <Link href={link} target="_blank" rel="noopener" aria-label={name}>
@@ -77,6 +113,7 @@ const Project = ({ image }) => {
           />
         </ImageContainer>
       </Link>
+      <Description>{descriptionItems}</Description>
     </Container>
   );
 };
