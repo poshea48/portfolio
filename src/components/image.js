@@ -14,28 +14,28 @@ const Image = ({ image, style = {} }) => {
       }
       hoursTracker: file(relativePath: { eq: "hoursTracker.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 400) {
+          fluid(maxWidth: 250, maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       rbPhotos: file(relativePath: { eq: "rbPhotos.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 400) {
+          fluid(maxWidth: 250, maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       mockDraft: file(relativePath: { eq: "mockDraft.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 400) {
+          fluid(maxWidth: 250, maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       tournTracker: file(relativePath: { eq: "tournTracker2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 400) {
+          fluid(maxWidth: 250, maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -1,22 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blues } from '../../styles/colors';
+import { blues } from '../../../styles/colors';
 
 const StyledBurger = styled.button`
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* height: 1.8rem; */
   width: 40px;
   height: 40px;
-  /* background: transparent; */
   background: ${blues.laurelGreen};
   border-radius: 5px;
   padding: 10px;
   border: none;
   cursor: pointer;
-  /* padding-left: ${({ open }) => (open ? '.4em' : '0')}; */
   z-index: 10;
   overflow: hidden;
   &:focus {
@@ -28,8 +25,7 @@ const StyledBurger = styled.button`
   div {
     width: 100%;
     height: 3px;
-    /* background: ${(p) => (p.open ? blues.laurelGreen : blues.maastrict)}; */
-    background: ${blues.maastrict};
+    background-color: ${blues.dark};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

@@ -18,8 +18,6 @@ const Container = styled.main`
 const Layout = () => {
   return (
     <Container>
-      <Seo title="Paul O'Shea Full Stack Developer" />
-      <Home />
       <ProjectsHome />
     </Container>
   );

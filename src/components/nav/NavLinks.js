@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import { blues } from '../../styles/colors';
 
 const List = styled.ul`
@@ -24,7 +23,8 @@ const List = styled.ul`
   a {
     font-size: 16px;
     text-decoration: none;
-    color: ${blues.gunMetal};
+    color: ${({ page }) =>
+      page == 'home' ? blues.gunMetal : blues.laurelGreen};
     border-radius: 5px;
     padding: 5px;
     font-weight: 900;
@@ -39,13 +39,6 @@ const List = styled.ul`
     }
   }
 
-  /* span {
-    margin: 0 0.5em 0 0;
-  }
-  a {
-    margin: 0 0.5em;
-  } */
-
   @media screen and (max-width: 992px) {
     flex-direction: column;
     justify-content: space-around;
@@ -56,7 +49,12 @@ const List = styled.ul`
       margin: 1em;
       span,
       a {
-        color: ${({ mobile }) => (mobile ? blues.laurelGreen : blues.gunMetal)};
+        color: ${({ mobile, page }) =>
+          mobile
+            ? blues.laurelGreen
+            : page == 'home'
+            ? blues.gunMetal
+            : blues.laurelGreen};
       }
       font-weight: 900;
       cursor: pointer;
@@ -68,21 +66,20 @@ const List = styled.ul`
     }
   }
 `;
-const NavLinks = ({ mobile }) => {
-  const handleScrollTo = () => scrollTo('#projects');
+const NavLinks = ({ mobile, page }) => {
   const linkRef = useRef(null);
   return (
-    <List mobile={mobile}>
+    <List mobile={mobile} page={page}>
       <li>
-        <span
-          tabIndex="0"
-          ref={linkRef}
-          role="button"
-          onClick={handleScrollTo}
-          onKeyDown={handleScrollTo}
-        >
-          Projects
-        </span>
+        {page == 'home' ? (
+          <Link to="/projects" ref={linkRef} role="button">
+            Projects
+          </Link>
+        ) : (
+          <Link to="/" ref={linkRef} role="button">
+            Home
+          </Link>
+        )}
       </li>
       <li>
         <Link to="/contact">Contact</Link>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Modal from '../modal/Modal';
+import Modal from './modal/Modal';
 import NavLinks from './NavLinks';
 
 const Container = styled.nav`
@@ -19,12 +19,12 @@ const Container = styled.nav`
   }
 `;
 
-const Navigation = () => {
+const Navigation = ({ page }) => {
   return (
     <Container>
-      <Modal />
+      <Modal page={page} />
       <div className="links-container">
-        <NavLinks mobile={false} />
+        <NavLinks page={page} mobile={false} />
       </div>
     </Container>
   );

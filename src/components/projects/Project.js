@@ -1,72 +1,119 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../image';
-import { palette, ocean } from '../../styles/colors';
+import { blues } from '../../styles/colors';
 
-const Container = styled.div`
-  align-self: center;
+const Container = styled.li`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: transparent;
-  margin: 0.5em;
-  max-width: 700px;
-  width: 80%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  background-color: ${blues.lgWhite};
+  padding: 1em;
+  max-width: 800px;
+  width: 100%;
   margin-bottom: 1em;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
 
-    h3 {
-      text-decoration: underline;
-    }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 5px ${blues.laurelGreen};
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 const Title = styled.div`
   display: flex;
-  justify-content: center;
-  box-shadow: inset 0 0 40px 5px #708095;
-  margin-bottom: 0;
+  justify-content: flex-start;
   border-radius: 30px 30px 0 0;
-
+  margin-bottom: 0.5em;
   h3 {
-    text-align: center;
-    padding: 0.25em;
+    text-align: left;
+    padding: 0;
     border-radius: 15px;
-    /* color: ${palette.lightGray}; */
-    /* color: ${ocean.celestial}; */
-    color: #f0c50b;
+    color: ${blues.dark};
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 0;
-    /* &:hover {
-      text-decoration: underline;
-      color: black;
-      transition: all 0.3s ease-in-out;
-    } */
+  }
+  @media screen and (max-width: 768px) {
+    h3 {
+      text-align: center;
+    }
   }
 `;
 const Link = styled.a`
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.005);
+
+    h3 {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    align-items: center;
+  }
 `;
 
 const ImageContainer = styled.div`
-  width: 100%;
+  width: 250px;
+  height: 150px;
+  position: relative;
+`;
+
+const Description = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% - 200px);
+  height: 100%;
+  margin-left: 4em;
+  .buzz {
+    text-transform: uppercase;
+    color: ${blues.un};
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+    padding-right: 0;
+  }
 `;
 
 const Project = ({ image }) => {
-  const { name, img, link } = image;
+  const { name, img, link, description } = image;
+  const descriptionItems = description.map((item, i) => (
+    <li key={i}>{item}</li>
+  ));
   return (
     <Container>
-      <Link href={link} target="_blank" rel="noopener">
+      <Link href={link} target="_blank" rel="noopener" aria-label={name}>
         <Title>
           <h3>{name}</h3>{' '}
         </Title>
         <ImageContainer>
-          <Image image={img} style={{ borderRadius: '0 0 30px 30px' }} />
+          <Image
+            image={img}
+            style={{
+              borderRadius: '10px',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              bottom: 0,
+              width: '100%',
+            }}
+          />
         </ImageContainer>
       </Link>
+      <Description>{descriptionItems}</Description>
     </Container>
   );
 };
