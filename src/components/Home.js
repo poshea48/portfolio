@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import StyledShakaBackground from './ShakaBackground';
 import Header from './Header';
+
 const Container = styled.main`
   position: relative;
   display: flex;
