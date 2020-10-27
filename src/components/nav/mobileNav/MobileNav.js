@@ -10,12 +10,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
-
-  @media (max-width: 350px) {
-    display: flex;
-  }
 `;
-const Modal = ({ page }) => {
+const MobileNav = ({ page }) => {
   const [open, setOpen] = useState(false);
   const node = useRef(null);
 
@@ -36,4 +32,4 @@ const Modal = ({ page }) => {
   );
 };
 
-export default Modal;
+export default MobileNav;

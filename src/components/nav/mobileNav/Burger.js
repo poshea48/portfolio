@@ -3,12 +3,6 @@ import styled from 'styled-components';
 import { blues } from '../../../styles/colors';
 
 const StyledBurger = styled.button`
-  display: flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: space-around;
   width: 40px;
   height: 40px;
   background: ${blues.laurelGreen};
@@ -23,15 +17,6 @@ const StyledBurger = styled.button`
     box-shadow: 0 0 5px 5px
       ${({ open }) => (open ? blues.lgWhite : blues.gunMetal)};
   }
-  /* @media (max-width: 500px) {
-    width: 35px;
-    height: 35px;
-    padding: 8px;
-    div {
-      height: 3px;
-      z-index: 10;
-    }
-  } */
 `;
 
 const Line = styled.div`
@@ -43,19 +28,21 @@ const Line = styled.div`
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
-  transform-origin: 1px;
+  transform-origin: 0;
   z-index: 12;
   &:first-child {
+    margin-bottom: 4px;
     transform: ${({ open }) =>
-      open ? 'translateX(2.5px) rotate(45deg)' : 'rotate(0)'};
+      open ? 'translateX(3px) rotate(45deg)' : 'rotate(0)'};
   }
   &:nth-child(2) {
     opacity: ${({ open }) => (open ? '0' : '1')};
     transform: ${({ open }) => (open ? 'translateX(30px)' : 'translateX(0)')};
   }
   &:nth-child(3) {
+    margin-top: 4px;
     transform: ${({ open }) =>
-      open ? 'translateX(2.5px) rotate(-45deg)' : 'rotate(0)'};
+      open ? 'translateX(3px) rotate(-45deg)' : 'rotate(0)'};
   }
 `;
 const Burger = ({ open, setOpen }) => {
