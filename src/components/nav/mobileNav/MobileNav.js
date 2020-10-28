@@ -17,6 +17,7 @@ const MobileNav = ({ page }) => {
 
   useOnClickOutside(node, () => {
     setOpen(false);
+    node.current.focus();
   });
   const keyUpHandler = (e) => {
     if (e.key === 'Escape') {
@@ -25,8 +26,8 @@ const MobileNav = ({ page }) => {
     }
   };
   return (
-    <Container ref={node} onKeyUp={keyUpHandler}>
-      <Burger open={open} setOpen={setOpen} />
+    <Container onKeyUp={keyUpHandler}>
+      <Burger buttonRef={node} open={open} setOpen={setOpen} page={page} />
       <Window open={open} page={page} />
     </Container>
   );

@@ -15,7 +15,12 @@ const StyledBurger = styled.button`
   &:focus {
     outline: none;
     box-shadow: 0 0 5px 5px
-      ${({ open }) => (open ? blues.lgWhite : blues.gunMetal)};
+      ${({ open, page }) => {
+        if (open) {
+          return blues.lgWhite;
+        }
+        return page == 'home' ? blues.gunMetal : blues.lgWhite;
+      }};
   }
 `;
 
@@ -45,10 +50,12 @@ const Line = styled.div`
       open ? 'translateX(3px) rotate(-45deg)' : 'rotate(0)'};
   }
 `;
-const Burger = ({ open, setOpen }) => {
+const Burger = ({ open, setOpen, buttonRef, page }) => {
   return (
     <StyledBurger
       aria-label="navigation button"
+      ref={buttonRef}
+      page={page}
       open={open}
       onClick={() => setOpen(!open)}
     >
