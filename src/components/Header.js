@@ -5,8 +5,9 @@ import Navigation from './nav/Navigation';
 
 const Container = styled.header`
   position: sticky;
+  display: flex;
   width: 100%;
-  height: 150px;
+  height: 180px;
   top: 0;
   left: 0;
   text-transform: uppercase;
@@ -15,11 +16,16 @@ const Container = styled.header`
     page == 'home' ? 'transparent' : '#252725'};
   padding: 3em 0 1em 0;
   z-index: 10;
-  @media (max-width: 550px) {
+  @media screen and (max-width: 550px) {
     padding: 2em 3em 0 0;
+    height: 150px;
   }
 
-  @media (max-width: 400px) {
+  @media screen and (max-width: 500px) {
+    height: 130px;
+  }
+
+  @media screen and (max-width: 400px) {
     padding: 2em 1em 0 0em;
   }
 `;

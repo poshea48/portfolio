@@ -10,17 +10,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
-
-  @media (max-width: 350px) {
-    display: flex;
-  }
 `;
-const Modal = ({ page }) => {
+const MobileNav = ({ page }) => {
   const [open, setOpen] = useState(false);
   const node = useRef(null);
 
   useOnClickOutside(node, () => {
     setOpen(false);
+    node.current.focus();
   });
   const keyUpHandler = (e) => {
     if (e.key === 'Escape') {
@@ -29,11 +26,11 @@ const Modal = ({ page }) => {
     }
   };
   return (
-    <Container ref={node} onKeyUp={keyUpHandler}>
-      <Burger open={open} setOpen={setOpen} />
+    <Container onKeyUp={keyUpHandler}>
+      <Burger buttonRef={node} open={open} setOpen={setOpen} page={page} />
       <Window open={open} page={page} />
     </Container>
   );
 };
 
-export default Modal;
+export default MobileNav;
