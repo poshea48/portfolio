@@ -122,7 +122,7 @@ const ContactPage = () => {
       <WaterBackground />
       <LinksContainer>
         <Link to="/">Home</Link>
-        <Link to="/#projects">Projects</Link>
+        <Link to="/projects">Projects</Link>
         <Link to="/blog">Blog</Link>
       </LinksContainer>
       <Content dangerouslySetInnerHTML={{ __html: html }} />
