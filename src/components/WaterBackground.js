@@ -5,12 +5,13 @@ import BackgroundImage from 'gatsby-background-image';
 import { palette } from '../styles/colors';
 
 const StyledWaterBackground = styled(BackgroundImage)`
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   opacity: 0.8;
   background-position: 0 50%;
   background-repeat: no-repeat;
