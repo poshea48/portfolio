@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
@@ -10,7 +10,9 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-  padding: 2em 1.5em 2.5em 1.5em;
+  height: calc((var(--vh, 1vh) * 100));
+  min-height: -webkit-fill-available;
+  padding: 2em 1.5em 2em 1.5em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,11 +26,12 @@ const LinksContainer = styled.div`
   background-color: ${ocean.white};
   box-shadow: 0 0 4px 4px;
   opacity: 0.8;
-  padding: 0.5em 0;
+  padding: 1em 0;
   border-radius: 20px 20px 0 0;
   align-self: center;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
+  height: 50px;
   z-index: 30;
   box-sizing: border-box;
   a {
@@ -43,8 +46,8 @@ const Content = styled.div`
   flex-basis: 1 auto;
   overflow: scroll;
   padding: 1em;
-  max-width: 600px;
-  margin-bottom: 2em;
+  max-width: 800px;
+  height: calc(100% - 50px);
   align-self: center;
   border-radius: 0 0 20px 20px;
   background: ${ocean.white};
@@ -106,6 +109,30 @@ const Content = styled.div`
   }
 `;
 const ContactPage = () => {
+  useEffect(() => {
+    if (typeof window === undefined) return;
+    let mounted = true;
+    const resizeHeight = () => {
+      if (!mounted) return;
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    let timeoutId;
+    const resizeListener = () => {
+      // prevent execution of previous setTimeout
+      clearTimeout(timeoutId);
+      // change width from the state object after 150 milliseconds
+      timeoutId = setTimeout(() => resizeHeight(), 1000);
+    };
+    window.addEventListener('resize', resizeListener);
+    resizeHeight();
+    return () => {
+      mounted = false;
+      window.removeEventListener('resize', resizeListener);
+    };
+  }, []);
+
   const data = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { title: { eq: "About Me" } }) {
@@ -118,7 +145,7 @@ const ContactPage = () => {
   `);
   const { html } = data.markdownRemark;
   return (
-    <Wrapper>
+    <Wrapper id="contact-page">
       <WaterBackground />
       <LinksContainer>
         <Link to="/">Home</Link>
