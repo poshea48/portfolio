@@ -1,23 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 import WaterBackground from './WaterBackground';
 import { palette, ocean } from '../styles/colors';
+import Layout from './Layout';
 
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
-  width: 100%;
-  height: 100vh;
-  height: calc((var(--vh, 1vh) * 100));
-  min-height: -webkit-fill-available;
-  padding: 2em 1.5em 2em 1.5em;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
+  padding: 2em 1em;
 `;
-
 const LinksContainer = styled.div`
   display: flex;
   position: relative;
@@ -44,6 +41,7 @@ const LinksContainer = styled.div`
 `;
 const Content = styled.div`
   flex-basis: 1 auto;
+  opacity: 0.95;
   overflow: scroll;
   padding: 1em;
   max-width: 800px;
@@ -52,31 +50,35 @@ const Content = styled.div`
   border-radius: 0 0 20px 20px;
   background: ${ocean.white};
   box-shadow: 0 0 3px 3px;
-
-  opacity: 1;
   display: flex;
   overflow-x: scroll;
   flex-direction: column;
   z-index: 20;
+
   h2 {
     text-align: center;
+    font-weight: 800;
   }
   h3 {
     text-align: center;
     color: ${ocean.olivine};
+    font-weight: 800;
   }
   h4 {
     text-align: center;
     color: ${ocean.lilBoy};
+    font-weight: 800;
   }
   h5 {
     margin: 0;
     margin-bottom: 2px;
     text-align: center;
     color: ${palette.darkGray};
+    font-weight: 800;
   }
   p {
     color: ${ocean.celestial};
+    font-weight: 800;
     text-align: center;
     /* &:last-child {
       text-align: center;
@@ -84,16 +86,19 @@ const Content = styled.div`
   }
 
   li {
-    color: ${palette.mediumGray};
+    color: ${palette.darkGray};
+    font-weight: 800;
   }
   img[alt='its Paul'] {
     width: 100px;
     border-radius: 100%;
+    font-weight: 800;
   }
 
   em a {
     color: ${ocean.olivine};
     font-size: 18px;
+    font-weight: 800;
   }
   .tech {
     display: grid;
@@ -104,35 +109,11 @@ const Content = styled.div`
   }
 
   .tech p {
-    color: ${palette.mediumGray};
+    color: ${palette.darkGray};
     text-align: center;
   }
 `;
 const ContactPage = () => {
-  useEffect(() => {
-    if (typeof window === undefined) return;
-    let mounted = true;
-    const resizeHeight = () => {
-      if (!mounted) return;
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    let timeoutId;
-    const resizeListener = () => {
-      // prevent execution of previous setTimeout
-      clearTimeout(timeoutId);
-      // change width from the state object after 150 milliseconds
-      timeoutId = setTimeout(() => resizeHeight(), 1000);
-    };
-    window.addEventListener('resize', resizeListener);
-    resizeHeight();
-    return () => {
-      mounted = false;
-      window.removeEventListener('resize', resizeListener);
-    };
-  }, []);
-
   const data = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { title: { eq: "About Me" } }) {
@@ -145,15 +126,17 @@ const ContactPage = () => {
   `);
   const { html } = data.markdownRemark;
   return (
-    <Wrapper id="contact-page">
-      <WaterBackground />
-      <LinksContainer>
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/blog">Blog</Link>
-      </LinksContainer>
-      <Content dangerouslySetInnerHTML={{ __html: html }} />
-    </Wrapper>
+    <Layout>
+      <Wrapper>
+        <WaterBackground />
+        <LinksContainer>
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/blog">Blog</Link>
+        </LinksContainer>
+        <Content dangerouslySetInnerHTML={{ __html: html }} />
+      </Wrapper>
+    </Layout>
   );
 };
 
