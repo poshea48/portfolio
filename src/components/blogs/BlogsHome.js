@@ -2,16 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { palette } from '../../styles/colors';
+import Layout from '../Layout';
 
 const Container = styled.div`
-  position: relative;
   background: #f0f8ff;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 2em;
-  /* overflow: scroll; */
   h1 {
     align-self: center;
     margin: 0;
@@ -40,7 +39,7 @@ const List = styled.ul`
   }
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -72,29 +71,31 @@ const ListItem = styled.li`
 `;
 const BlogsHome = ({ blogs }) => {
   return (
-    <Container>
-      <h1>My Thoughts</h1>
+    <Layout>
+      <Container>
+        <h1>My Thoughts</h1>
 
-      <List>
-        {blogs.map((blog) => (
-          <li key={blog.id}>
-            <Link to={`${blog.fields.slug}`}>
-              <ListItem>
-                <span className="title">{blog.frontmatter.title}</span>
-                <span className="date">{blog.frontmatter.date}</span>
-                <span className="description">
-                  {blog.frontmatter.description}
-                </span>
-              </ListItem>
-            </Link>
-          </li>
-        ))}
-      </List>
-      <br />
-      <Link className="back-home" to="/">
-        Home
-      </Link>
-    </Container>
+        <List>
+          {blogs.map((blog) => (
+            <li key={blog.id}>
+              <Link to={`${blog.fields.slug}`}>
+                <ListItem>
+                  <span className="title">{blog.frontmatter.title}</span>
+                  <span className="date">{blog.frontmatter.date}</span>
+                  <span className="description">
+                    {blog.frontmatter.description}
+                  </span>
+                </ListItem>
+              </Link>
+            </li>
+          ))}
+        </List>
+        <br />
+        <Link className="back-home" to="/">
+          Home
+        </Link>
+      </Container>
+    </Layout>
   );
 };
 
