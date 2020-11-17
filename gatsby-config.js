@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Paul O'Shea Portfolio",
     description:
-      "Full Stack Developer.  Portfolio to display projects, bio, and contact information Paul O'Shea",
+      "JavaScript Developer.  Portfolio to display projects, bio, and contact information Paul O'Shea",
     author: "Paul O'Shea",
   },
   plugins: [
