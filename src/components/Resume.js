@@ -11,6 +11,7 @@ const BGWrapper = styled.div`
   background-color: ${blues.un};
   display: flex;
   flex-direction: column;
+  padding-bottom: 35px;
 `;
 
 const Nav = styled.nav`
