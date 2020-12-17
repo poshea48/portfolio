@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Image = ({ image, style = {} }) => {
-  console.log('inside Image, ', image);
   const data = useStaticQuery(graphql`
     query {
       mePic: file(relativePath: { eq: "thatsme.jpeg" }) {
@@ -15,35 +14,42 @@ const Image = ({ image, style = {} }) => {
       }
       hoursTracker: file(relativePath: { eq: "hoursTracker.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250, maxHeight: 150) {
+          fluid(maxWidth: 500, maxHeight: 280) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       rbPhotos: file(relativePath: { eq: "rbPhotos.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250, maxHeight: 150) {
+          fluid(maxWidth: 500, maxHeight: 280) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       mockDraft: file(relativePath: { eq: "mockDraft.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250, maxHeight: 150) {
+          fluid(maxWidth: 500, maxHeight: 280) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       tournTracker: file(relativePath: { eq: "tournTracker2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250, maxHeight: 150) {
+          fluid(maxWidth: 500, maxHeight: 280) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      beachCleanup: file(relativePath: { eq: "beachCleanup2.png" }) {
+      sh: file(relativePath: { eq: "sh.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250, maxHeight: 250) {
+          fluid(maxWidth: 500, maxHeight: 280) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beachCleanup: file(relativePath: { eq: "beachCleanup.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, maxHeight: 280) {
             ...GatsbyImageSharpFluid
           }
         }

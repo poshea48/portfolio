@@ -7,9 +7,13 @@ import { useEffect } from 'react';
 const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
+    const list = document.getElementById('nav-window');
     const listener = (event) => {
-      if (!ref.current || ref.current.contains(event.target)) {
+      if (
+        !ref.current ||
+        ref.current.contains(event.target) ||
+        list.contains(event.target)
+      ) {
         return;
       }
       handler(event);

@@ -1,14 +1,14 @@
 ---
-title: "About Me"
-date: "2019-12-04"
-description: "This is about me"
+title: 'About Me'
+date: '2019-12-04'
+description: 'This is about me'
 ---
 
 ### Aloha World!
 
 #### ![its Paul](../images/thatsme.jpeg)
 
-My name is Paul O'Shea, and I am a Full Stack Developer.
+My name is Paul O'Shea, and I am a JavaScript Developer.
 
 I build Web Applications using these technologies...
 ####Frontend

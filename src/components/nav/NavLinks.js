@@ -24,7 +24,7 @@ const List = styled.ul`
     font-size: 16px;
     text-decoration: none;
     color: ${({ page }) =>
-      page == 'home' ? blues.gunMetal : blues.laurelGreen};
+      page == 'home' || page == 'resume' ? blues.gunMetal : blues.laurelGreen};
     border-radius: 5px;
     padding: 5px;
     font-weight: 900;
@@ -39,20 +39,28 @@ const List = styled.ul`
     }
   }
 
+  @media screen and (max-width: 1220px) {
+    flex-direction: ${({ page }) => (page !== 'resume' ? 'column' : 'row')};
+    li {
+      margin-bottom: ${({ page }) => (page !== 'resume' ? '.5em' : 0)};
+    }
+  }
+
   @media screen and (max-width: 992px) {
-    flex-direction: column;
+    /* flex-direction: ${({ page }) =>
+      page == 'resume' ? 'row' : 'column'}; */
     justify-content: space-around;
     width: 100%;
     li {
       font-size: 16px;
       text-decoration: none;
-      margin: 1em;
+      margin: ${({ page }) => (page == 'resume' ? 0 : '1em')};
       span,
       a {
         color: ${({ mobile, page }) =>
           mobile
             ? blues.laurelGreen
-            : page == 'home'
+            : page == 'home' || page == 'resume'
             ? blues.gunMetal
             : blues.laurelGreen};
       }
@@ -86,6 +94,9 @@ const NavLinks = ({ mobile, page }) => {
       </li>
       <li>
         <Link to="/blog">Blog</Link>
+      </li>
+      <li>
+        <Link to="/resume">Resume</Link>
       </li>
     </List>
   );

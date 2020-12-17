@@ -5,18 +5,32 @@ import { blues } from '../../styles/colors';
 import Header from '../Header';
 const projects = {
   beachCleanup: {
-    name: 'Beach Cleanup',
+    name: 'Beach Cleanup Mobile App',
     description: [
+      'This project is still in development',
       'Mobile app used to collect data during a beach cleanup',
       'Used in place of outdated paper data sheets that some organizations provide to collect data for ocean conservation research',
       'Keeps track of the amount and type of item picked up and beach location data',
-      'Coming Soon:',
       'GPS locational services to track distance traveled',
       'Submit data to organization of choice in csv file',
+      'Built using React Native',
+      'This link is just a prototype and does not contain all the apps functionality',
     ],
     img: 'beachCleanup',
-    link: 'https://marine-debris-cleanup.herokuapp.com/',
-    dev: true,
+    link: 'https://snack.expo.io/@osheapaulf/beach-cleanup',
+  },
+  sh: {
+    name: 'Smart Highlights',
+    description: [
+      'This project was created from a contract position I was hired for by Smart Highlights, a company that creates NBA highlights using machine learning',
+      'The contract ended just as the 2019-2020 season finished, so there are still some UI fixes that need to be done.',
+      'The image carousel at the top of the homepage is created with videos that are pulled in from the database from the current week. If there hasn\'t been a video created in over a week, there will be a black background with just "Smart Hightlights" displayed',
+      'The responsive website design was created from a general layout constructed by a graphic designer',
+      'Frontend built using: Gatsby, React, TypeScript and GraphQL',
+      'Collaboratively worked with the founder to develop the GraphQL backend using AWS Resources: Amplify, AppSync, Cognito, and DynamoDB',
+    ],
+    img: 'sh',
+    link: 'https://stage.sportsalpha.io/',
   },
   mockDraft: {
     name: 'Mock Draft',
@@ -29,6 +43,16 @@ const projects = {
     img: 'mockDraft',
     link: 'https://mock-it-up.netlify.com/',
   },
+  rbPhotos: {
+    name: 'Photo Gallery',
+    description: [
+      'E-commerce site for a local photographer to showcase and sell their work.',
+      'The Frontend was built with Next, React, and Apollo to handle state management and GraphQL queries/mutations',
+      'The Backend GraphQL API was built using Node/Express(Graphql Yoga) with a PostgreSQL database',
+    ],
+    img: 'rbPhotos',
+    link: 'https://ryanbrewerphotography.now.sh',
+  },
   hoursTracker: {
     name: 'Hours Tracker',
     description: [
@@ -40,16 +64,7 @@ const projects = {
     img: 'hoursTracker',
     link: 'https://po-hours-tracker.herokuapp.com',
   },
-  rbPhotos: {
-    name: 'Photo Gallery',
-    description: [
-      'E-commerce site for a local photographer to showcase and sell their work.',
-      'The Frontend was built with Next, React, and Apollo to handle state management and GraphQL queries/mutations',
-      'The Backend GraphQL API was built using Node/Express(Graphql Yoga) with a PostgreSQL database',
-    ],
-    img: 'rbPhotos',
-    link: 'https://ryanbrewerphotography.now.sh',
-  },
+
   tournTracker: {
     name: 'Tournament Tracker',
     description: [
