@@ -89,7 +89,9 @@ const Description = styled.ul`
   justify-content: flex-start;
   width: calc(100% - 200px);
   height: 100%;
-  margin-left: 4em;
+  width: 100%;
+  padding: 1em 0px 1em 1em;
+  margin: 0;
   .buzz {
     text-transform: uppercase;
     color: ${blues.un};
