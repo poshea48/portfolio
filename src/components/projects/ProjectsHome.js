@@ -14,7 +14,7 @@ const projects = {
       'GPS locational services to track distance traveled',
       'Submit data to organization of choice in csv file',
       'Built using React Native',
-      'This link is just a prototype and does not contain all the apps functionality',
+      'This link is to a snippet hosted on expo.io and does not contain all the apps functionality (unless you have the Expo app, this snippet does not work well on mobile devices)',
     ],
     img: 'beachCleanup',
     link: 'https://snack.expo.io/@osheapaulf/beach-cleanup',
