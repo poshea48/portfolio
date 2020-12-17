@@ -12,9 +12,9 @@ const projects = {
   sh: {
     name: 'Smart Highlights',
     description: [
-      'Project created for the company Smart Highlights that creates NBA highlights using machine learning',
-      'Contract ended before the 2019-2020 season ended, so there are still some UI fixes that need to be done. Hoping Smart Highlights wants to finish the project once the new season comes back 🤞',
-      'The image carousel at the top of the homepage is created with videos pulled in from the database from the current week. If there hasn\'t been a video created in over a week, there will be an black background with just "Smart Hightlights" displayed',
+      'This project was created from a contract position I was hired for by Smart Highlights, a company that creates NBA highlights using machine learning',
+      'The contract ended just as the 2019-2020 season finished, so there are still some UI fixes that need to be done.',
+      'The image carousel at the top of the homepage is created with videos that are pulled in from the database from the current week. If there hasn\'t been a video created in over a week, there will be a black background with just "Smart Hightlights" displayed',
       'The responsive website design was created from a general layout constructed by a graphic designer',
       'Frontend built using: Gatsby, React, TypeScript and GraphQL',
       'Collaboratively worked with the founder to develop the GraphQL backend using AWS Resources: Amplify, AppSync, Cognito, and DynamoDB',
