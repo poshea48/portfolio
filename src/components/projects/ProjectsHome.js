@@ -4,11 +4,21 @@ import Project from './Project';
 import { blues } from '../../styles/colors';
 import Header from '../Header';
 const projects = {
-  // beachCleanup: {
-  //   name: "Beach Cleanup App",
-  //   img: "beachCleanup",
-  //   link: "https://marine-debris-cleanup.herokuapp.com/"
-  // }
+  beachCleanup: {
+    name: 'Beach Cleanup Mobile App',
+    description: [
+      'This project is still in development',
+      'Mobile app used to collect data during a beach cleanup',
+      'Used in place of outdated paper data sheets that some organizations provide to collect data for ocean conservation research',
+      'Keeps track of the amount and type of item picked up and beach location data',
+      'GPS locational services to track distance traveled',
+      'Submit data to organization of choice in csv file',
+      'Built using React Native',
+      'This link is just a prototype and does not contain all the apps functionality',
+    ],
+    img: 'beachCleanup',
+    link: 'https://snack.expo.io/@osheapaulf/beach-cleanup',
+  },
   sh: {
     name: 'Smart Highlights',
     description: [
