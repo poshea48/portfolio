@@ -5,6 +5,7 @@ import { blues } from '../../styles/colors';
 
 const Container = styled.li`
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 10px;
@@ -44,11 +45,13 @@ const Title = styled.div`
   }
 `;
 const Link = styled.a`
+  width: 100%;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
+  align-items: center;
   &:hover {
     transform: scale(1.005);
 
@@ -63,9 +66,20 @@ const Link = styled.a`
 `;
 
 const ImageContainer = styled.div`
-  width: 250px;
-  height: 150px;
+  max-width: 500px;
+  width: 100%;
+  height: 280px;
   position: relative;
+  @media screen and (max-width: 650px) {
+    max-width: 400px;
+    width: 100%;
+    height: 224px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 300px;
+    width: 100%;
+    height: 168px;
+  }
 `;
 
 const Description = styled.ul`
