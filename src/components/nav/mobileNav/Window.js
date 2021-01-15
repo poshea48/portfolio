@@ -70,7 +70,8 @@ const Window = ({ open, page }) => {
       open={open}
       id="nav-window"
       role="dialog"
-      aria-labelledby="navigation-window"
+      aria-labelledby="nav-window"
+      aria-describedby="navigation window"
     >
       <NavLinks mobile={true} page={page} />
     </StyledWindow>
