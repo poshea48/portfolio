@@ -48,9 +48,11 @@ const Name = styled.div`
   }
   h2 {
     align-self: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    font-weight: 900;
     margin: 0.5em 0 0.5em 0;
-    color: ${({ page }) => (page == 'home' ? blues.laurelGreen : '#F6F6F3')};
+    color: ${({ page }) => (page == 'home' ? '#fff' : '#F6F6F3')};
+    /* #E1E5F6 => cloud color */
   }
 
   @media (max-width: 550px) {
