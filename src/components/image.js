@@ -47,6 +47,13 @@ const Image = ({ image, style = {} }) => {
           }
         }
       }
+      beachCleanup: file(relativePath: { eq: "beachCleanup.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, maxHeight: 280) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 

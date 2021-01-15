@@ -45,7 +45,8 @@ const Title = styled.div`
   }
 `;
 const Link = styled.a`
-  width: 100%;
+  align-self: center;
+  width: 500px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -62,6 +63,14 @@ const Link = styled.a`
   @media screen and (max-width: 768px) {
     align-self: center;
     align-items: center;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 400px;
+    width: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 300px;
+    width: 100%;
   }
 `;
 
