@@ -47,7 +47,7 @@ const ShakaBackground = ({ children }) => (
       return (
         <StyledShakaBackground
           fluid={imageData}
-          backgroundColor="487DCF"
+          backgroundColor="#487DCF"
           style={style}
         >
           {children}
