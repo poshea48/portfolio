@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
-import { palette } from '../styles/colors';
 
 const StyledShakaBackground = styled(BackgroundImage)`
   -webkit-background-size: cover;
@@ -48,7 +47,7 @@ const ShakaBackground = ({ children }) => (
       return (
         <StyledShakaBackground
           fluid={imageData}
-          backgroundColor={palette.lightGray}
+          backgroundColor="487DCF"
           style={style}
         >
           {children}
