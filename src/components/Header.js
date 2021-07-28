@@ -86,7 +86,7 @@ const Header = ({ page }) => {
       <Navigation page={page} />
       <Name page={page}>
         <h1>{myName}</h1>
-        <h2>JavaScript Developer</h2>
+        <h2>Software Developer</h2>
       </Name>
     </Container>
   );

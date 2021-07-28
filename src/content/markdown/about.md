@@ -8,32 +8,34 @@ description: 'This is about me'
 
 #### ![its Paul](../images/thatsme.jpeg)
 
-My name is Paul O'Shea, and I am a JavaScript Developer.
+My name is Paul O'Shea,
 
-I build Web Applications using these technologies...
+I enjoy solving problems and building solutions using these technologies...
 ####Frontend
 
 <div class="tech">
-<p>JavaScript</p>
-<p>React.js</p>
-<p>Gatsby</p>
-<p>Next.js</p>
-<p>Apollo</p>
-<p>Redux</p>
+  <p>JavaScript/TypeScript</p>
+  <p>React.js</p>
+  <p>Next.js</p>
+  <p>Gatsby</p>
+  <p>React Native</p>
+  <p>Redux</p>
 </div>
 
 ####Backend
 
 <div class="tech">
-<p>Node</p>
-<p>Express</p>
-<p>GraphQL</p>
-<p>Postgresql</p>
-<p>MySQL</p>
-<p>MongoDB</p>
+  <p>Node</p>
+  <p>PHP</p>
+  <p>GraphQL</p>
+  <p>Postgresql</p>
+  <p>MySQL</p>
+  <p>MongoDB</p>
 </div>
 
-I made the transition into Software Development 3 years ago, coming from a 13 year career in the Medical Device Field.
+I also love to learn new technologies/practices and build upon my foundational knowledge of Software Engineering in order to create the most efficient solution
+
+I made the transition into Software Development 4 years ago, coming from a 13 year career in the Medical Device Field.
 My reasons for leaving have now become the core values I look for in building my new career
 
 1. Strive for challenge and to be pushed past my limits
@@ -42,7 +44,7 @@ My reasons for leaving have now become the core values I look for in building my
 
 I live on the island of Maui Hawaii, with...
 
-####This beautiful lady
+####My future wife (April 2022!)
 #####Abigail
 ![gail](../images/boatGail.jpeg)
 

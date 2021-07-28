@@ -53,18 +53,6 @@ const projects = {
     img: 'rbPhotos',
     link: 'https://ryanbrewerphotography.now.sh',
   },
-  hoursTracker: {
-    name: 'Hours Tracker',
-    description: [
-      'App that keeps track of a user’s hours worked daily with ability to view cumulative hours worked over each week and month.',
-      'Create and track individual projects alongside your total hours',
-      'The Frontend was built using React and Redux for state management',
-      'The Backend RESTful API was built using Node/Express with a PostgreSQL database',
-    ],
-    img: 'hoursTracker',
-    link: 'https://po-hours-tracker.herokuapp.com',
-  },
-
   tournTracker: {
     name: 'Tournament Tracker',
     description: [
