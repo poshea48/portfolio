@@ -39,6 +39,9 @@ const Container = styled.div`
     @media screen and (max-width: 480px) {
       display: none;
     }
+    .title {
+      text-align: center !important;
+    }
   }
 `;
 
@@ -64,11 +67,11 @@ const Resume = () => {
         <Container>
           <iframe
             title="resume"
-            src="https://docs.google.com/document/d/e/2PACX-1vQUfcTvgOyElA0q2gkxNZbJ13FB6YXWtBW-ZlM4qqndyU62UkDVNGd5EYyMMWIK-Hu01Hr_pMjzLB1X/pub?embedded=true"
+            src="https://docs.google.com/document/d/e/2PACX-1vRgYrXa12LOQT10_OOPgeCCiUBvuZ2-AQIfFoJaugXr1qyVkPvmCp6HUg8A8x41yNTtmzSwtGvp451C/pub?embedded=true"
           ></iframe>
           <LinkContainer>
             <a
-              href="https://docs.google.com/document/d/e/2PACX-1vQUfcTvgOyElA0q2gkxNZbJ13FB6YXWtBW-ZlM4qqndyU62UkDVNGd5EYyMMWIK-Hu01Hr_pMjzLB1X/pub"
+              href="https://docs.google.com/document/d/e/2PACX-1vRgYrXa12LOQT10_OOPgeCCiUBvuZ2-AQIfFoJaugXr1qyVkPvmCp6HUg8A8x41yNTtmzSwtGvp451C/pub"
               target="_blank"
               rel="noreferrer"
             >
